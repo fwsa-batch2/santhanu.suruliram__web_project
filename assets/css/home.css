@@ -1,47 +1,86 @@
 * {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
 }
 body {
-  background-image: url("../img/tourbeachdark.jpg");
+  background: linear-gradient(to bottom, #090f25 0%, #27317e 100%);
   background-position: center;
-
+  
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   padding: 15px;
 }
-ul {
-  position: absolute;
-  top: 40px;
-  left: 35%;
+.btns{
+  background-color: blue;
+  height: 35px; width: 65px;
+  border: none; border-radius: 10px;
+  color: white;
+}
+#header{
+  margin-top: -20px;
+  display: grid;
+  grid-template-columns: 1px 75% 100%;
+  grid-template-rows: auto auto auto;
+  background-color: transparent;
+}
+.header-items{
+  border: none;
+}
+#navbar {
   list-style-type: none;
-  margin-top: 10px;
-  margin-left: 1px;
+  margin-left: 25%;
 }
 
-ul li {
+#navbar li {
   display: inline-block;
 }
 
-ul li a {
+#navbar li a {
   text-decoration: none;
   color: white;
-  font-size: x-large;
+  font-size: medium;
   padding: 5px 20px;
   border: 1px solid transparent;
   transition: 0.5s ease;
 }
 
-ul li a:hover {
+#navbar li a:hover {
   border-radius: 20px;
-  border: 1px solid;
+  color: black;
+  background-color: white;
 }
-ul li.active a {
-  border: 1px solid;
-  color: darkcyan;
+#navbar li.active a {
+  background-color: white;
+  color: blue;
   border-radius: 20px;
+}
+#time{
+  background-color: white;
+  height: 100px; width: 700px;
+  padding: 20px;
+  border-radius: 20px; opacity: 70%;
+  margin-bottom: 15px; 
+  margin-left: 50px;
+}
+#infimg{
+  position: absolute;
+  top: 160px; right: 170px;
+  width: 500px; height: 145px;
+  border-radius: 20px;
+
 }
 
+#scroll_top {
+  position: fixed;
+  bottom: 10px; right: 10px;
+  border-radius: 100%;
+  background-color: blueviolet; 
+  border: none;
+}
 img {
   border-radius: 5%;
   padding: 5px;
@@ -50,19 +89,18 @@ img {
 }
 #searchbar {
   background-color: white;
-  opacity: 70%;
+  
   border-radius: 10px;
 
   height: 40px;
   width: 64%;
-  margin-left: 20%;
   margin-bottom: 15px;
-  padding: 5px;
+  padding-top: -5px;
 }
 
 img:hover {
   height: 260px;
-  opacity: 50%;
+  
 }
 #icon {
   height: 30px;
@@ -80,15 +118,16 @@ input {
 }
 .tab1 {
   background-color: white;
-  opacity: 60%;
+
   border-radius: 20px;
   margin-bottom: 15px;
 }
 
+
 #abus {
   color: black;
   background-color: white;
-  opacity: 70%;
+ 
   padding: 20px;
   border-radius: 15px;
   height: auto;
@@ -110,7 +149,7 @@ input {
 .contact-tab {
   color: black;
   background-color: white;
-  opacity: 70%;
+  
   border-radius: 5px;
   padding: 15px;
   height: 120px;
@@ -126,11 +165,29 @@ input {
 .support {
   color: black;
   background-color: white;
-  opacity: 70%;
+
   border-radius: 15px;
   width: 800px;
   height: auto;
   margin-left: 20%;
   margin-top: 6%;
   padding: 20px;
+}
+.morning{
+  background-image: url('../../assets/img/sunrise.png');
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.afternoon{
+  background-image: url('../../assets/img/mid-day.png');
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.evening{
+  background-image: url('../../assets/img/sunset.png');
+  background-repeat: no-repeat;
+}
+.night{
+  background-image: url('../../assets/img/night.png');
+  background-repeat: no-repeat;
 }

@@ -25,26 +25,19 @@
     </style>
   </head>
   <body>
-    <header>
-      <h1 style="color: white" align="left">TourTube</h1>
-      <ul id="navbar">
-        <li><a href="./tourhome.html">Home</a></li>
+    <header id="header">
+      <a href="../index.html" class="header-items"><img src="../assets/img/tt-logo.webp" style="height: 35px;"></a>
+      <ul id="navbar" class="header-items">
+        <li><a href="../index.html">Home</a></li>
+        <li ><a href="#">Explore</a></li>
+        <li><a href="#">Articles</a></li>
+        <li ><a href="#">My trips</a></li>
         <li class="active"><a href="./support.html">Support</a></li>
         <li><a href="./contact.html">Contact</a></li>
         <li><a href="./aboutus.html">About Us</a></li>
       </ul>
-      <div id="log1">
-        Logged in as
-        <button
-          style="
-            border-radius: 60%;
-            border: none;
-            color: white;
-            background-color: black;
-          "
-        >
-          A
-        </button>
+        <button class="btns header-items"><a href="./tourlogin.html" style="color: white; font-size: large;">Login</a></button>
+        <p id="user_box"></p>
       </div>
     </header>
 

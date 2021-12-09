@@ -1,5 +1,6 @@
 body {
-  background-image: url("../img/tourbeachdark.jpg");
+  background: linear-gradient(to bottom, #090f25 0%, #27317e 100%);
+  font-family: sans-serif;
   background-position: center;
   margin-top: 100px;
   height: 100;

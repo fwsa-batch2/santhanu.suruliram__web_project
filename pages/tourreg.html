@@ -9,52 +9,50 @@
 
 </head>
 <body align="center">
-<h1 align="center" style="color: white; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">TourTube</h1>
-<p align="center" style="color: white; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">A virtual Tour Guide, that make's your trip easier</p>
-<h1 style=" color:white; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"align="center">TourTube Registration</h1>
+<h1 align="center" style="color: white;">TourTube</h1>
+<p align="center" style="color: white;">A virtual Tour Guide, that make's your trip easier</p>
+<div>
+<h1 style=" color:white; font-family: sans-serif;"align="center">TourTube Registration</h1>
 
 
-<form action="./toursuccess.html" style="font-size: x-large;">
+<form style="font-size: x-large;"  onsubmit="loginAlert()" >
 
-<table align="center" border="0" bgcolor="transparent" style="color: black; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; " >
+<table align="center" border="0" bgcolor="transparent" style="color: black; " >
 
-<tr><th align="right">Name:&nbsp;<input type="text" name="name" placeholder="Name" size="larger" required></th></tr>
+<tr><th align="right">Name:&nbsp;<input type="text" id="name_box" name="name" placeholder="Enter name" size="larger" required></th></tr>
 
 
-<tr><th align="right">Email:&nbsp;<input type="email" name="email" placeholder="Email" required></th></tr>
-<tr><th align="right">Phone Number:&nbsp;<select name="ccode" class="select">
-  <option>+91</option>
-  <option>+1</option>
-  <option>+33</option>
-  <option>+972</option>
-  <option>+49</option>
-  <option>+61</option>
-  <option>+44</option>
+<tr><th align="right">Email:&nbsp;<input type="email" id="email_box" name="email" placeholder="Enter email" required></th></tr>
+<tr><th align="right">Phone Number:&nbsp;<select id="ccode_box" name="ccode" class="select">
+  <option value="+91" >+91</option>
+  <option value="+1">+1</option>
+  <option value="+33">+33</option>
+  <option value="+972">+972</option>
+  <option value="+49">+49</option>
+  <option value="+61">+61</option>
+  <option value="+44">+44</option>
 </select>
-<input type="number" name="phno" placeholder="Phone Number" maxlength="10"  pattern="\d{10}" required></th></tr>
+<input type="number" id="phno_box" name="phno" placeholder="Phone Number" maxlength="10"  required></th></tr>
 
 
 
 
-<tr><th align="right">New Password:&nbsp;<input type="password" name="passwd" placeholder="New Password" required></td></tr>
-<tr><th align="right">Confirm Password:&nbsp;<input type="password" name="passwd" placeholder="Confirm Pasword" required></th></tr>
-<tr><th align="right">Date of Birth:&nbsp;<input type="date" max='2011-01-01' min="1960-01-01" required></th></tr>
+<tr><th align="right">New Password:&nbsp;<input type="password" name="passwd" placeholder="New Password" id="enter_pass" required></td></tr>
+<tr><th align="right">Confirm Password:&nbsp;<input type="password" name="passwd" placeholder="Confirm Pasword" id="confirm_pass" required></th></tr>
+<tr><th align="right">Date of Birth:&nbsp;<input type="date" id="dob_box" max='2011-01-01' min="1960-01-01" required></th></tr>
 
 </table>
 <div>
-  <button class="btns" type="submit" style="background-color: blue; margin-left: 80px;" ><a href="./toursuccess.html" ><span>Submit</span></a></button>
+  <button class="btns" type="submit" style="background-color: blue; margin-left: 80px;" ><span>Submit</span></button>
   <button class="btns" type="reset" style="background-color: gray;" ><span>Reset</span></button>
-  <button class="btns" type="button" style="background-color: crimson;"><span><a href="../index.html">Cancel</a></span></button>
+  <button class="btns" type="button" style="background-color: crimson; color: white;"><span><a href="../index.html">Cancel</a></span></button>
   </div>
 
 </form>
 
-<h1 align="center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: x-large; color: white;">Let us know what do you think about TourTube</h1>
-<div class="feedback">
-<textarea style="height: 60px; width: 600px; border-radius: 15px; border:none; font-size: 15px; text-align: center;"></textarea><br>
-<button style="height: 60px; width: 100px; border: none; background-color: cyan; border-radius: 15px; margin-top: 5px;">Send Feedback</button>
-</div>
 
+</div>
+<script src="../assets/js/reg.js"></script>
 </body>
 
 </html>

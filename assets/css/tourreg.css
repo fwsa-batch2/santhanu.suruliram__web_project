@@ -1,10 +1,18 @@
 body {
-  background-image: url("../img/tourbeachdark.jpg");
+  background: linear-gradient(to bottom, #090f25 0%, #27317e 100%);
   background-position: center;
   height: 100;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  font-family: sans-serif;
+}
+#reg_div{
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 70%;
+  width: 1200px;
 }
 img {
   border-radius: 10%;
@@ -77,6 +85,6 @@ table {
 }
 
 a {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }

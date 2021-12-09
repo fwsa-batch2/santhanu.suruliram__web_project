@@ -1,6 +1,6 @@
 body {
-  background-image: url("../img/tourbeachdark.jpg");
-
+  background: linear-gradient(to bottom, #090f25 0%, #27317e 100%);
+  font-family: sans-serif;
   height: 100;
   background-size: cover;
   background-attachment: fixed;
@@ -12,7 +12,7 @@ img {
   padding: 10px;
 }
 a {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: sans-serif;
   color: white;
   font-size: medium;
 }
