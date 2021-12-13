@@ -44,7 +44,7 @@ function emailValid(current_email) {
     for (i = 0; i < userList.length; i++) {
         const user = userList[i];
         const email = user.email;
-        if (current_email == email) {
+        if (current_email.to == email) {
             isUsed = true;
             break;
         }
