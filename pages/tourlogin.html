@@ -28,16 +28,17 @@
       ">
     TourTube Login
   </h1>
-
+ 
   <form align="center" action="./tourhome.html" style="
         font-family: sans-serif;
         font-size: xx-large;
         color: white;
-      ">
-    <label for="name">Username:</label><input type="text" id="user_name_box" style="margin: 20px" name="name"
-      placeholder="Username" size="larger" required /><br />
-    <label for="passwd">Password:</label><input type="password" style="margin: 20px" name="passwd"
-      placeholder="Password" required />
+      "
+      >
+    <label for="name">User Email:</label><input type="text" id="email_box" style="margin: 20px" name="email"
+      placeholder="Enter Email" size="larger" required /><br />
+    <label for="passwd">Password:</label><input type="password" style="margin: 20px" name="passwd" id="password"
+      placeholder="Enter Password" required />
     <div>
       <h1 style="
             color: white;
@@ -55,14 +56,14 @@
       </h1>
     </div>
 
-    <button class="button" type="submit" style="background-color: blue; cursor: pointer">
-      <a href="./tourhome.html"> <span>Login</span></a>
+    <button class="button" type="submit" onsubmit="submitHandler()" style="background-color: blue; cursor: pointer" >
+      <a> <span>Login</span></a>
     </button>
     <button class="button" type="button" style="background-color: crimson; cursor: pointer">
       <a href="../index.html"><span>Cancel</span></a>
     </button>
   </form>
-  <script src="../assets/js/login.js"></script>
+  <script src="./../assets/js/login.js"></script>
 </body>
 
 </html>

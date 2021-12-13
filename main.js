@@ -1,28 +1,21 @@
 function timelyMsg(){
-    const hours = new Date.getHours();
+    const date = new Date();
+    const hours = date.getHours();
     if (hours < 12){
-        document.getElementById('imgdiv').classList.add('morning');
-        document.getElementById('imgdiv').classList.remove('afternoon');
-        document.getElementById('imgdiv').classList.remove('evening');
-        document.getElementById('imgdiv').classList.remove('night');
+        console.log('morning');
+        document.getElementById('imgdiv').innerHTML = '<img src="./assets/img/sunrise.png" style="height: 50px;">';
+        document.getElementById('msg').innerHTML = 'Good Morning!';
     }
-    else if (hours > 12 || hours < 16){
-        document.getElementById('imgdiv').classList.remove('morning');
-        document.getElementById('imgdiv').classList.add('afternoon');
-        document.getElementById('imgdiv').classList.remove('evening');
-        document.getElementById('imgdiv').classList.remove('night');
+    else if (hours < 18){
+        console.log('afternoon');
+        document.getElementById('imgdiv').innerHTML = '<img src="./assets/img/mid-day.png" style="height: 50px;">';
+        document.getElementById('msg').innerHTML = 'Good Afternoon!';
     }
-    else if (hours > 16 || hours < 19){
-        document.getElementById('imgdiv').classList.remove('morning');
-        document.getElementById('imgdiv').classList.remove('afternoon');
-        document.getElementById('imgdiv').classList.add('evening');
-        document.getElementById('imgdiv').classList.remove('night');
-    }
+    
     else {
-        document.getElementById('imgdiv').classList.remove('morning');
-        document.getElementById('imgdiv').classList.remove('afternoon');
-        document.getElementById('imgdiv').classList.remove('evening');
-        document.getElementById('imgdiv').classList.add('night');
+        console.log('night');
+        document.getElementById('imgdiv').innerHTML = '<img src="./assets/img/night.png" style="height: 50px;">';
+        document.getElementById('msg').innerHTML = 'Good Night!';
     }
 }
 timelyMsg();

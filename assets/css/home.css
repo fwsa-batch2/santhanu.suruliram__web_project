@@ -60,15 +60,15 @@ body {
 }
 #time{
   background-color: white;
-  height: 100px; width: 700px;
+  height: 100px; width: 920px;
   padding: 20px;
-  border-radius: 20px; opacity: 70%;
+  border-radius: 20px; 
   margin-bottom: 15px; 
-  margin-left: 50px;
+  
 }
 #infimg{
   position: absolute;
-  top: 160px; right: 170px;
+  top: 160px; right: 20px;
   width: 500px; height: 145px;
   border-radius: 20px;
 
@@ -172,22 +172,4 @@ input {
   margin-left: 20%;
   margin-top: 6%;
   padding: 20px;
-}
-.morning{
-  background-image: url('../../assets/img/sunrise.png');
-  background-repeat: no-repeat;
-  height: 100%;
-}
-.afternoon{
-  background-image: url('../../assets/img/mid-day.png');
-  background-repeat: no-repeat;
-  height: 100%;
-}
-.evening{
-  background-image: url('../../assets/img/sunset.png');
-  background-repeat: no-repeat;
-}
-.night{
-  background-image: url('../../assets/img/night.png');
-  background-repeat: no-repeat;
 }

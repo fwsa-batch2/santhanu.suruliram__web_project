@@ -6,6 +6,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 #reg_div{
   background-color: black;
