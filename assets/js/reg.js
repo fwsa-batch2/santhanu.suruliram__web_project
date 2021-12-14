@@ -1,15 +1,15 @@
 let userList = [];
 
 function onPageLoad() {
-    let users = JSON.parse(localStorage.getItem("usersname"));
-    if (users != null) {
-        userList = users;
+    let getFromLs = JSON.parse(localStorage.getItem("usersname"));
+    if (getFromLs != null) {
+        userList = getFromLs;
     }
 }
 onPageLoad();
 
 
-function loginAlert() {
+function submitHandler() {
     event.preventDefault();
     const username = document.getElementById("name_box").value;
     const email = document.getElementById("email_box").value;
@@ -44,7 +44,7 @@ function emailValid(current_email) {
     for (i = 0; i < userList.length; i++) {
         const user = userList[i];
         const email = user.email;
-        if (current_email.to == email) {
+        if (current_email == email) {
             isUsed = true;
             break;
         }

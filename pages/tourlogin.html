@@ -29,16 +29,17 @@
     TourTube Login
   </h1>
  
-  <form align="center" action="./tourhome.html" style="
+  <form align="center"  style="
         font-family: sans-serif;
         font-size: xx-large;
         color: white;
-      "
+      " onsubmit="submitHandler()"
       >
     <label for="name">User Email:</label><input type="text" id="email_box" style="margin: 20px" name="email"
       placeholder="Enter Email" size="larger" required /><br />
     <label for="passwd">Password:</label><input type="password" style="margin: 20px" name="passwd" id="password"
       placeholder="Enter Password" required />
+      <div id="err_msg" style="color: red; font-size: small;"></div>
     <div>
       <h1 style="
             color: white;

@@ -15,14 +15,15 @@
 <h1 style=" color:white; font-family: sans-serif;"align="center">TourTube Registration</h1>
 
 
-<form style="font-size: x-large;"  onsubmit="loginAlert()" >
+<form style="font-size: x-large;"  onsubmit="submitHandler()" >
 
 <table align="center" border="0" bgcolor="transparent" style="color: black; " >
 
-<tr><th align="right">Name:&nbsp;<input type="text" id="name_box" name="name" placeholder="Enter name" size="larger" required></th></tr>
+<tr><th align="right">Name:&nbsp;<input type="text" id="name_box" name="name" placeholder="Enter name" size="larger" 
+  onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" required></th></tr>
 
 
-<tr><th align="right">Email:&nbsp;<input type="email" id="email_box" name="email" placeholder="Enter email" required></th></tr>
+<tr><th align="right">Email:&nbsp;<input type="email" id="email_box" name="email" placeholder="Enter email" pattern="[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,}" required></th></tr>
 <tr><th align="right">Phone Number:&nbsp;<select id="ccode_box" name="ccode" class="select">
   <option value="+91" >+91</option>
   <option value="+1">+1</option>
