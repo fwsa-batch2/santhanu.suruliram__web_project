@@ -1,6 +1,7 @@
 * {
   font-family: sans-serif;
   scroll-behavior: smooth;
+  color: black;
 }
 a{
   text-decoration: none;
@@ -20,19 +21,27 @@ body {
   border: none; border-radius: 10px;
   color: white;
 }
+.btns-booking{
+  background-color: blue;
+  height: 45px; width: 100px;
+  border: none; border-radius: 10px;
+  color: white;
+  float: right;
+}
 #header{
   margin-top: -20px;
   display: grid;
-  grid-template-columns: 1px 75% 100%;
+  grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: auto auto auto;
   background-color: transparent;
 }
-.header-items{
-  border: none;
+#header > div{
+  justify-content: center;
 }
+
 #navbar {
   list-style-type: none;
-  margin-left: 25%;
+ 
 }
 
 #navbar li {
@@ -58,49 +67,80 @@ body {
   color: blue;
   border-radius: 20px;
 }
-#time{
+#widget{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+}
+#widget > div{
   background-color: white;
-  height: 100px; width: 920px;
-  padding: 20px;
-  border-radius: 20px; 
+  padding: 25px; 
+  border-radius: 5px; 
   margin-bottom: 15px; 
+  height: 100px;
   
+}
+#tour-content-heading{
+  background-color: gray;
+  border-radius: 5px;
+  justify-content: center;
+}
+#tour-content{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+#tour-content > div{
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+
+}
+
+#trip-ideas-heading{
+  background-color: gray;
+  border-radius: 5px;
+}
+#trip-ideas{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+#trip-ideas > div{
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 #infimg{
   position: absolute;
   top: 160px; right: 20px;
   width: 500px; height: 145px;
   border-radius: 20px;
-
 }
+
 
 #scroll_top {
   position: fixed;
   bottom: 10px; right: 10px;
   border-radius: 100%;
+  height: 50px; width: 50px;
   background-color: blueviolet; 
   border: none;
 }
 img {
   border-radius: 5%;
-  padding: 5px;
   height: 250px;
   transition: 0.4s;
 }
 #searchbar {
   background-color: white;
-  
-  border-radius: 10px;
-
-  height: 40px;
-  width: 64%;
-  margin-bottom: 15px;
-  padding-top: -5px;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  background-color: transparent;
 }
 
 img:hover {
   height: 260px;
-  
 }
 #icon {
   height: 30px;
@@ -116,12 +156,7 @@ input {
   margin-bottom: 20px;
   text-align: center;
 }
-.tab1 {
-  background-color: white;
 
-  border-radius: 20px;
-  margin-bottom: 15px;
-}
 
 
 #abus {
@@ -135,31 +170,6 @@ input {
   margin-left: 19%;
   margin-top: 11%;
   box-shadow: 20px 20px 10px black;
-}
-
-#tabcont {
-  margin-top: 100px;
-}
-
-#tabcont td {
-  padding: 20px;
-  width: 500px;
-}
-
-.contact-tab {
-  color: black;
-  background-color: white;
-  
-  border-radius: 5px;
-  padding: 15px;
-  height: 120px;
-  width: 200px;
-  transition: 0.5s;
-  box-shadow: 20px 20px 10px black;
-}
-.contact-tab:hover {
-  background-color: red;
-  border-radius: 20px;
 }
 
 .support {

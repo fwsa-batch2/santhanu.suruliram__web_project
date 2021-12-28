@@ -1,3 +1,17 @@
+function show_pass() {
+  let checkBox = document.getElementById('show-pass');
+
+  if (checkBox.checked) {
+    document.getElementById('password').type = "text";
+  }
+  else {
+    document.getElementById('password').type = "password";
+  }
+}
+
+
+
+
 function submitHandler() {
   event.preventDefault();
 
@@ -7,12 +21,12 @@ function submitHandler() {
   const isExist = isUserExist(email, password);
 
   if (isExist) {
-      localStorage.setItem("current_loggedin_user", email);
-      window.location.href = "./../../index.html"
+    localStorage.setItem("current_loggedin_user", email);
+    window.location.href = "./../../index.html"
   }
   else {
-      document.getElementById('err_msg').innerText = "User Email or Password is incorrect!";
-      return null;
+    document.getElementById('err_msg').innerText = "User Email or Password is incorrect!";
+    return null;
   }
 }
 
@@ -23,13 +37,13 @@ function isUserExist(paramemail, parampassword) {
   const len = userDetails.length;
 
   for (i = 0; i < len; i++) {
-      const user = userDetails[i];
-      const userEmail = user.email;
-      const userPassword = user.password;
-      if (userEmail === paramemail && userPassword === parampassword) {
-          isExist = true;
-          break;
-      }
+    const user = userDetails[i];
+    const userEmail = user.email;
+    const userPassword = user.password;
+    if (userEmail === paramemail && userPassword === parampassword) {
+      isExist = true;
+      break;
+    }
   }
   return isExist;
 

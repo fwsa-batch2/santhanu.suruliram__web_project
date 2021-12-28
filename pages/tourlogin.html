@@ -1,58 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="../assets/css/loginpage.css" />
+  <link rel="icon" type="image/x-icon" href="./../assets/img/favicon.ico">
   <title>TourTube Login</title>
 </head>
 
 <body align="center">
-  <h1 style="
-        color: white;
-        font-family: sans-serif;
-      ">
-    TourTube
-  </h1>
-  <p style="
-        color: white;
-        font-family: sans-serif;
-      ">
-    A virtual Tour Guide, that make's your trip easier
-  </p>
-  <h1 style="
-        color: white;
-        font-family: sans-serif;
-      ">
-    TourTube Login
-  </h1>
+  <h1 style="color: white; font-family: sans-serif;">TourTube</h1>
+  <p style="color: white; font-family: sans-serif;"> A virtual Tour Guide, that make's your trip easier</p>
+  <h1 style=" color: white; font-family: sans-serif;">TourTube Login</h1>
  
-  <form align="center"  style="
-        font-family: sans-serif;
-        font-size: xx-large;
-        color: white;
-      " onsubmit="submitHandler()"
-      >
+  <form align="center"  style="font-family: sans-serif; font-size: xx-large;color: white;" onsubmit="submitHandler()">
     <label for="name">User Email:</label><input type="text" id="email_box" style="margin: 20px" name="email"
       placeholder="Enter Email" size="larger" required /><br />
     <label for="passwd">Password:</label><input type="password" style="margin: 20px" name="passwd" id="password"
-      placeholder="Enter Password" required />
+      placeholder="Enter Password" required /> 
+      <input type="checkbox" onchange="show_pass()" id="show-pass">
+      
       <div id="err_msg" style="color: red; font-size: small;"></div>
     <div>
-      <h1 style="
-            color: white;
-            font-family: sans-serif;
-            font-size: medium;
-          ">
+      <h1 style="color: white;font-family: sans-serif; font-size: medium;">
         Forgot password? Click<a href="./tour-forgotpw.html" style="color: cyan; margin-left: 10px">here</a>
       </h1>
-      <h1 style="
-            color: white;
-            font-family: sans-serif;
-            font-size: medium;
-          ">
+      <h1 style="color: white;font-family: sans-serif;font-size: medium;">
         New User? Register<a href="./tourreg.html" style="color: cyan; margin-left: 10px">here</a>
       </h1>
     </div>

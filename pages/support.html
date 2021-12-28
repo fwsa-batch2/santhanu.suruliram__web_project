@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../assets/css/home.css" />
-
+    <link rel="icon" type="image/x-icon" href="./../assets/img/favicon.ico">
     <title>TourTube Support</title>
     <style>
       #inp {
@@ -24,24 +24,25 @@
       }
     </style>
   </head>
-  <body>
+  <body align="center">
     <header id="header">
-      <a href="../index.html" class="header-items"><img src="../assets/img/tt-logo.webp" style="height: 35px;"></a>
-      <ul id="navbar" class="header-items">
+      <div><a href="../index.html"><img src="../assets/img/tt-logo.webp" style="height: 35px;" alt=""></a></div>
+      <div><ul id="navbar" >
         <li><a href="../index.html">Home</a></li>
-        <li ><a href="#">Explore</a></li>
-        <li><a href="#">Articles</a></li>
-        <li ><a href="#">My trips</a></li>
+        <li ><a href="./explore.html">Explore</a></li>
+        <li ><a href="./articles.html">Articles</a></li>
+        <li ><a href="./mytrips.html">My trips</a></li>
         <li class="active"><a href="./support.html">Support</a></li>
         <li><a href="./contact.html">Contact</a></li>
         <li><a href="./aboutus.html">About Us</a></li>
-      </ul>
-        <button class="btns header-items"><a href="./tourlogin.html" style="color: white; font-size: large;">Login</a></button>
-        <p id="user_box"></p>
+      </ul></div>
+      <div>
+        <button class="btns"><a href="./tourlogin.html" style="color: white;">Login</a></button>
+        <button class="btns" style="background-color: red;"><a href="./tourreg.html" style="color: white;">Register</a></button>
       </div>
     </header>
 
-    <div class="support" align="center">
+    <div class="support">
       <h1 style="font-size: large">How can we help?</h1>
       <input type="search" id="inp" placeholder="Search queries here" />
       <button class="btn">Search</button>
@@ -50,25 +51,8 @@
       <h1 style="font-size: large">
         (or) &nbsp; &nbsp; Talk to our Virtual Support Assistant!
       </h1>
-      <div
-        style="
-          background-color: gray;
-          border-radius: 10px;
-          padding: 10px;
-          height: 300px;
-        "
-      >
-        <p
-          style="
-            background-color: blue;
-            color: white;
-            border-radius: 10px;
-            width: 200px;
-            height: 30px;
-            padding-top: 9px;
-          "
-          align="center"
-        >
+      <div style="background-color: gray; border-radius: 10px; padding: 10px; height: 300px;">
+        <p style="background-color: blue; color: white; border-radius: 10px; width: 200px; height: 30px; padding-top: 9px;">
           Hi! Need any help?
         </p>
         <br /><br /><br />
@@ -79,16 +63,7 @@
         <br />
         <br />
         <br />
-        <input
-          type="text"
-          placeholder="type to chat"
-          style="
-            background-color: black;
-            width: 650px;
-            height: 40px;
-            color: white;
-          "
-        />
+        <input type="text" placeholder="type to chat" style="background-color: black; width: 650px; height: 40px; color: white; "/>
         <button class="btn">Enter</button>
       </div>
     </div>

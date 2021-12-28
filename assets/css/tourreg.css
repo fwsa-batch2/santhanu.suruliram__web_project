@@ -8,42 +8,36 @@ body {
   font-family: sans-serif;
   scroll-behavior: smooth;
 }
-#reg_div{
-  background-color: black;
-  padding: 10px;
-  border-radius: 10px;
-  opacity: 70%;
-  width: 1200px;
-}
-img {
-  border-radius: 10%;
-}
-th,
-td {
-  padding: 5px;
+#reg-div{
   color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-row-gap: 10px;
+  width: 40%; height: 70px;
+  margin-left: 25%;
 }
-.select {
-  border-radius: 20px;
+#reg-div > div{
+  text-align: right;
+}
+#phno_box{
+  border-radius: 10px 0px 10px 10px;
+}
+#ccode_box {
+  border-radius: 10px 10px 0px 0px;
   height: 40px;
   border: none;
-  margin-left: 10px;
   font-size: 15px;
+  background-color: gray;
 }
 input {
-  border-radius: 20px;
+  border-radius: 10px;
   width: 250px;
   height: 40px;
   border: none;
-  margin-left: 10px;
   font-size: 15px;
   padding-left: 10px;
 }
-table {
-  margin-top: 30px;
-  margin-right: 500px;
-  font-size: x-large;
-}
+
 
 .btns {
   border-radius: 10px;

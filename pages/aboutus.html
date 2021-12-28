@@ -1,45 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../assets/css/home.css" />
+    <link rel="icon" type="image/x-icon" href="./../assets/img/favicon.ico">
     <title>TourTube About us</title>
+    <style>
+      #credits > li{
+        display: inline-block;
+        margin-left: 20px;
+      }
+    </style>
   </head>
   <body>
     <header id="header">
-      <a href="../index.html" class="header-items"><img src="../assets/img/tt-logo.webp" style="height: 35px;"></a>
-      <ul id="navbar" class="header-items">
-        <li ><a href="../index.html">Home</a></li>
-        <li ><a href="#">Explore</a></li>
-        <li><a href="#">Articles</a></li>
-        <li ><a href="#">My trips</a></li>
+      <div><a href="../index.html"><img src="../assets/img/tt-logo.webp" style="height: 35px;" alt="logo"></a></div>
+      <div><ul id="navbar" >
+        <li><a href="../index.html">Home</a></li>
+        <li ><a href="./explore.html">Explore</a></li>
+        <li ><a href="./articles.html">Articles</a></li>
+        <li ><a href="./mytrips.html">My trips</a></li>
         <li><a href="./support.html">Support</a></li>
         <li><a href="./contact.html">Contact</a></li>
         <li class="active"><a href="./aboutus.html">About Us</a></li>
-      </ul>
-        <button class="btns header-items"><a href="./tourlogin.html" style="color: white; font-size: large;">Login</a></button>
-        <p id="user_box"></p>
+      </ul></div>
+      <div>
+        <button class="btns"><a href="./tourlogin.html" style="color: white;">Login</a></button>
+        <button class="btns" style="background-color: red;"><a href="./tourreg.html" style="color: white;">Register</a></button>
       </div>
     </header>
     <div id="abus">
-      <h1
-        style="
-          color: red;
-          font-family: sans-serif;
-        "
-      >
-        About us
-      </h1>
+      <h1 style="color: red; font-family: sans-serif;">About us</h1>
       <p>
         TourTube is one of the best Tour guiding platforms, which provides a
         best experience, for user in tour guiding. TourTube is founded in the
-        year 2021, by Santhanu. Tourtube offers you the best experience in 24/7
+        year 2021, by <strong>Santhanu</strong>. Tourtube offers you the best experience in 24/7
         Customer support too.
       </p>
       <p style="color: blue">why Tourtube?</p>
       <p>Tourtube is there, To give information on touring.</p>
+      <br>
+      <h3 style="color: blue;">Credits</h3>
+      <ul id="credits">
+        <li><a href="https://www.freshworks.com/company/philanthropy/software-academy/"> FWSA</a></li>
+        <li><a href="https://hotelinminutes.fwsa.in/">Hotel in Minutes</a> (by <strong>Haiden</strong>)</li>
+        <li><a href="https://www.google.com/maps"> Google Maps</a></li>
+        <li><a href="https://www.flaticon.com">Flaticon</a></li>
+        <li><a href="https://www.makemytrip.com">Make my trip</a></li>
+        
+      </ul>
+      <p></p>
     </div>
   </body>
 </html>

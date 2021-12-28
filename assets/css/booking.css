@@ -1,0 +1,76 @@
+*{
+    color: white;
+}
+input{
+    height: 40px;
+    width: 500px;
+}
+#ccode_box{
+    height: 40px;
+    width: 60px;
+    border-radius: 50px;
+}
+#phno_box{
+    width: 433px;
+}
+#avatar-file{
+    border: 1px solid black;
+    opacity: 0%;
+    height: 100px; 
+    width: 100px;
+    position: absolute;
+    left: 38.5%;
+    top: 25%;
+}
+#main-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+.box{
+    background-color: rgb(109, 109, 109);
+    padding: 15px;
+    border-radius: 5px;
+
+}
+#left-panel{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#left-panel > #avatar-div{
+    text-align: center;
+    padding-top: 30px;
+}
+#right-panel{
+    text-align: center;
+}
+#payment-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+#payment-list > li{
+    display: inline-block;
+    text-align: center;
+}
+#payment-list > li > img{
+    height: 150px;
+    
+}
+#payment-list > li > p {
+    font-size: medium;
+    color: white;
+}
+.radio-btns{
+    height: 30px;
+    width: 30px;
+    
+}
+.form-btns {
+    height: 50px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    font-size: large;
+    margin-top: 7px;
+}
+
