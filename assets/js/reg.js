@@ -29,18 +29,19 @@ function submitHandler() {
             "email": email,
             "phone-number": phno,
             "password": password,
-            "confirmPassword": confirmPassword
         }
 
         userList.push(customerDetail);
         let userslists=JSON.stringify(userList);
         localStorage.setItem("usersname",userslists);
+        alert('You have been successfully registered! You will be redirected to Login')
         window.location.href = "../../pages/tourlogin.html";
     }
 }
 
 function emailValid(current_email) {
     let isUsed = false;
+    let i;
     for (i = 0; i < userList.length; i++) {
         const user = userList[i];
         const email = user.email;

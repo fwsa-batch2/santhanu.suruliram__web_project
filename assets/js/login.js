@@ -34,9 +34,8 @@ function isUserExist(paramemail, parampassword) {
   let isExist = false;
 
   const userDetails = JSON.parse(localStorage.getItem("usersname"));
-  const len = userDetails.length;
-
-  for (i = 0; i < len; i++) {
+  let i;
+  for ( i = 0; i < userDetails.length; i++) {
     const user = userDetails[i];
     const userEmail = user.email;
     const userPassword = user.password;

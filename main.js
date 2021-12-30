@@ -23,3 +23,19 @@ function timelyMsg(){
     }
 }
 timelyMsg();
+// want to simplify the code by just giving the src of img in js and as well as h2
+var loggedInUser = localStorage.getItem('current_loggedin_user');
+if(loggedInUser != null){
+    document.getElementById('login').style.display = "none";
+    document.getElementById('register').style.display = "none";
+}
+function loginRecommendation() {
+    if(loggedInUser === null){
+        if (confirm('Please Login to get more Touring details!') == true){
+            window.location.href = "./pages/tourlogin.html";
+        }
+    }
+}
+setTimeout(loginRecommendation, 5000);
+
+

@@ -133,10 +133,8 @@ img {
   transition: 0.4s;
 }
 #searchbar {
-  background-color: white;
   justify-content: center;
   grid-template-columns: 1fr 1fr;
-  background-color: transparent;
 }
 
 img:hover {

@@ -11,25 +11,24 @@
 </head>
 
 <body align="center">
-  <h1 style="color: white; font-family: sans-serif;">TourTube</h1>
-  <p style="color: white; font-family: sans-serif;"> A virtual Tour Guide, that make's your trip easier</p>
-  <h1 style=" color: white; font-family: sans-serif;">TourTube Login</h1>
+  
+  <h1>TourTube Login</h1>
  
   <form align="center"  style="font-family: sans-serif; font-size: xx-large;color: white;" onsubmit="submitHandler()">
     <label for="name">User Email:</label><input type="text" id="email_box" style="margin: 20px" name="email"
       placeholder="Enter Email" size="larger" required /><br />
     <label for="passwd">Password:</label><input type="password" style="margin: 20px" name="passwd" id="password"
-      placeholder="Enter Password" required /> 
-      <input type="checkbox" onchange="show_pass()" id="show-pass">
-      
+      placeholder="Enter Password" required minlength="8"/>  <br>
+      <input type="checkbox" name="showpw" onchange="show_pass()" id="show-pass"> <label for="showpw" style="font-size: medium;">Show Password</label>
+       
       <div id="err_msg" style="color: red; font-size: small;"></div>
     <div>
-      <h1 style="color: white;font-family: sans-serif; font-size: medium;">
+      <p style="font-size: medium;">
         Forgot password? Click<a href="./tour-forgotpw.html" style="color: cyan; margin-left: 10px">here</a>
-      </h1>
-      <h1 style="color: white;font-family: sans-serif;font-size: medium;">
+      </p>
+      <p style="font-size: medium;">
         New User? Register<a href="./tourreg.html" style="color: cyan; margin-left: 10px">here</a>
-      </h1>
+      </p>
     </div>
 
     <button class="button" type="submit" onsubmit="submitHandler()" style="background-color: blue; cursor: pointer" >

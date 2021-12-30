@@ -1,6 +1,8 @@
-function avatarSelect() {
-    event.preventDefault();
-    let avatarLocation = document.getElementById('avatar-file').value;
-    console.log(avatarLocation);
-    document.getElementById('avatar').src = avatarLocation;
-}
+var imgInp = document.getElementById('file');
+imgInp.onchange = function(){
+  var files = imgInp.files;
+  if (file) {
+    document.getElementById('avatar').src = URL.createObjectURL(files[0]);
+  }
+};
+

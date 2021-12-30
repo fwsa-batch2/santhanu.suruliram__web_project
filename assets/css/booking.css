@@ -1,6 +1,4 @@
-*{
-    color: white;
-}
+
 input{
     height: 40px;
     width: 500px;
@@ -13,7 +11,7 @@ input{
 #phno_box{
     width: 433px;
 }
-#avatar-file{
+#file{
     border: 1px solid black;
     opacity: 0%;
     height: 100px; 

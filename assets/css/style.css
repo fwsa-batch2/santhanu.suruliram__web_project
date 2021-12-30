@@ -6,11 +6,11 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   scroll-behavior: smooth;
+  color: white;
+  text-align: center;
+  
 }
-img {
-  border-radius: 20px;
-  padding: 10px;
-}
+
 a {
   font-family: sans-serif;
   color: white;
@@ -61,4 +61,10 @@ a {
 .btns:hover span:after {
   opacity: 1;
   right: 0;
+}
+#loading-main-div{
+  background-color: white;
+  color: black;
+  font-size: x-large;
+  border-radius: 5px;
 }
