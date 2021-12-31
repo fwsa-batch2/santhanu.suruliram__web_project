@@ -6,7 +6,6 @@ function randomCode() {
 }
 let code = randomCode();
 console.log(code);
-
 function sendEmail() {
     let email = document.getElementById('email').value;
     Email.send({
@@ -18,8 +17,8 @@ function sendEmail() {
       Subject: "This is your 6 digit code for password reset",
       Body: code,
     })
-      .then(function (message) {
-        alert("mail sent successfully")
+      .then(function () {
+        alert("mail sent successfully");
       });
 }
 
@@ -30,9 +29,11 @@ function fpwProtocol(){
     if (emailExist){
         sendEmail();
         localStorage.setItem('fpw-email', email);
+        document.getElementById('msg1').innerHTML = "A 6 Digit code is sent to your registered Email.";
+        document.getElementById('code').disabled = false;
     }
     else {
-        alert('Please enter an email which is registered with your account!');
+        document.getElementById('msg1').innerText = 'Please enter an email which is registered with your account!';
     }
 }
 function checkForEmail(emailInput) {
@@ -52,14 +53,13 @@ function checkForEmail(emailInput) {
 
 function mainFunc() {
     let codeFromUser = document.getElementById('code').value;
-    console.log("code from user" + codeFromUser);
-    console.log('code' + code);
     if (codeFromUser == code){
         document.getElementById('enter-pass').disabled = false;
         document.getElementById('confirm-pass').disabled = false;
+        document.getElementById('success').innerText = "success";
     }
     else {
-        alert('The code you entered is incorrect :(');
+        document.getElementById('msg2').innerText = 'The code you entered is incorrect :(';
   
     }
 }
@@ -84,7 +84,7 @@ function updatePass() {
         }
     } 
     else{
-        alert('Passwords do not Match :(');
+        document.getElementById('msg3').innerText = 'Passwords do not Match :(' ;
     }
 }
 
