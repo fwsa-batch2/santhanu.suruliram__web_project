@@ -23,6 +23,6 @@
 
 ### Forgot password Page
 * A 6 digit random code is sent to the users registered email.
-* Un-registered email is unaccepted.
+* Un-registered email is not accepted.
 * New password and confirm password input boxes unlocks, after entering the correct 6 digit code.
 * The new password is update to the local storage, and redirects to the login page.

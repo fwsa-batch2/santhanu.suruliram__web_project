@@ -16,13 +16,7 @@ a {
   color: white;
   font-size: medium;
 }
-.btns {
-  background-color: blue;
-  border: none;
-  border-radius: 20px;
-  height: 40px;
-  width: 80px;
-}
+
 .btns {
   border-radius: 10px;
   background-color: #0097fc;
