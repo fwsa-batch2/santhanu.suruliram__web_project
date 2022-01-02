@@ -9,7 +9,7 @@ function onPageLoad() {
 onPageLoad();
 
 
-function submitHandler() {
+function submitHandler(event) {
     event.preventDefault();
     const username = document.getElementById("name_box").value;
     const email = document.getElementById("email_box").value;

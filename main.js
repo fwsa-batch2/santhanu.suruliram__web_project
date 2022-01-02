@@ -31,7 +31,7 @@ if(loggedInUser != null){
 }
 function loginRecommendation() {
     if(loggedInUser === null){
-        if (confirm('Please Login to get more Touring details!') == true){
+        if (confirm('Please Login to get more Touring details!')){
             window.location.href = "./pages/tourlogin.html";
         }
     }

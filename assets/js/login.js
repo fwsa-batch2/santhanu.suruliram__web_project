@@ -12,7 +12,7 @@ function show_pass() {
 
 
 
-function submitHandler() {
+function submitHandler(event) {
   event.preventDefault();
 
   let email = document.getElementById("email_box").value;
