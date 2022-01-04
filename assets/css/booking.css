@@ -12,13 +12,9 @@ input{
     width: 433px;
 }
 #file{
-    border: 1px solid black;
-    opacity: 0%;
-    height: 100px; 
     width: 100px;
-    position: absolute;
-    left: 38.5%;
-    top: 25%;
+    height: 20px;
+    position: element(avatar);
 }
 #main-div{
     display: grid;

@@ -1,8 +1,7 @@
 
 function randomCode() {
     let rand =  Math.random();
-    let output = Math.floor((rand * 999999) + 100000);
-    return output;
+    return (Math.floor((rand * 999999) + 100000)) ;
 }
 let code = randomCode();
 console.log(code);

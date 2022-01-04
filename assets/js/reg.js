@@ -8,8 +8,7 @@ function onPageLoad() {
 }
 onPageLoad();
 
-
-function submitHandler(event) {
+function submitHandler() {
     event.preventDefault();
     const username = document.getElementById("name_box").value;
     const email = document.getElementById("email_box").value;
@@ -20,6 +19,9 @@ function submitHandler(event) {
     const isEmailAlreadyExist = emailValid(email);
     if(isEmailAlreadyExist){
         alert("Email already exist");
+    }
+    else if(username == "" ){
+        alert('empty parameters');
     }
     else if(password != confirmPassword ) {
         alert("please check your password")

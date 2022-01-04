@@ -1,0 +1,18 @@
+.trip-div{
+    background-color: white;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    grid-gap: 5px;
+}
+
+.trip-div > div {
+    background-color: rgb(148, 148, 148);
+    padding: 10px;
+    border-radius: 5px;
+}
+.trip-div > div > h4 {
+    color: rgb(0, 0, 165);
+}
+
