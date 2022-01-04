@@ -17,8 +17,7 @@
 
 <form id="reg-div" onsubmit="submitHandler()">
   <div>Name:</div>
-  <div><input type="text" id="name_box" name="name" placeholder="Enter name" size="larger" 
-    onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" pattern="[A-Za-z]{3,15}" required></div>
+  <div><input type="text" id="name_box" name="name" placeholder="Enter name" size="larger" pattern="[A-Za-z]{3,15}" required></div>
   <div>Email:</div>
   <div><input type="email" id="email_box" name="email" placeholder="Enter email" pattern="[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,}" required></div>
   <div>Phone Number:</div>
@@ -33,6 +32,7 @@
   </select>
   <input type="number" id="phno_box" name="phno" placeholder="Phone Number" min="6000000000" max="9999999999" required></div>
   <div>New Password:</div>
+
   <div><input type="password" name="passwd" placeholder="New Password" id="enter_pass" minlength="8" required></div>
   <div>Confirm Password:</div>
   <div><input type="password" name="passwd" placeholder="Confirm Pasword" id="confirm_pass" minlength="8" required></div>

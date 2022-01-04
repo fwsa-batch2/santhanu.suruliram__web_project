@@ -22,8 +22,7 @@ timelyMsg();
 
 var loggedInUser = localStorage.getItem('current_loggedin_user');
 if(loggedInUser != null){
-    document.getElementById('login').style.display = "none";
-    document.getElementById('register').style.display = "none";
+    document.getElementById('btn-area').innerHTML = '<button class="btns" style="background-color:green;" onclick="logOut()">Log Out</button>'
 }
 function loginRecommendation() {
     if(loggedInUser === null){
@@ -39,4 +38,10 @@ function bookPlace(place) {
     localStorage.setItem('tour-place', tourDestin);
     window.location.href = "./pages/booking.html";
 }
+
+function logOut() {
+    localStorage.removeItem('current_loggedin_user');
+    window.location.reload();
+}
+
 
