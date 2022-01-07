@@ -3,6 +3,7 @@ imgInp.onchange = function(){
   let files = imgInp.files;
   if (file) {
     document.getElementById('avatar').src = URL.createObjectURL(files[0]);
+    console.log(URL.createObjectURL(files[0]));
   }
 };
 let userBookings = [];

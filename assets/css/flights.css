@@ -10,3 +10,10 @@ body {
     text-align: center;
     
   }
+  #loading-main-div{
+    background-color: white;
+    color: black;
+    font-size: x-large;
+    border-radius: 5px;
+  }
+  

@@ -39,12 +39,24 @@
       #main-div > div > img{
         height: 200px;
       }
+      .btn-booking{
+        height: 40px;
+        width: 100px;
+        background-color: blue;
+        border: none; 
+        border-radius: 10px;
+        float: right;
+        color: white;
+      }
+
     </style>
   </head>
 
-  <body align="center">
-    <h1 style="color: white; font-family: sans-serif;">TourTube</h1>
-    <h1 style="float: left;">Egypt:</h1> <br> <br> <br> <br>
+  <body>
+    <h1 style="color: white; font-family: sans-serif; text-align: center;">TourTube</h1>
+    <h1 style="float: left;">Egypt:</h1> 
+    <button onclick="bookPlace('Maldives')" class="btn-booking">Book now</button>
+    <br> <br> <br> <br>
     <div>
       <img src="../assets/img/egypt1.jpg" alt=""/>
       <img src="../assets/img/egypt2.jpg" alt=""/>
@@ -215,5 +227,13 @@
         you turn here, though, is home to some wonderful piece of ancient art
         or statuary that would form a highlight of any other museum.</div>
     </div>
+    <script>
+      function bookPlace(place) {
+        const tourDestin = JSON.stringify(place);
+        localStorage.setItem('tour-place', tourDestin);
+        window.location.href = "./../pages/booking.html";
+      }
+    </script>
+  
   </body>
 </html>

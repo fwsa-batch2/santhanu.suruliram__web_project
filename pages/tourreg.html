@@ -17,7 +17,7 @@
 
 <form id="reg-div" onsubmit="submitHandler()">
   <div>Name:</div>
-  <div><input type="text" id="name_box" name="name" placeholder="Enter name" size="larger" pattern="[A-Za-z]{3,15}" required></div>
+  <div><input type="text" id="name_box" name="name" placeholder="Enter name" size="larger" pattern="[A-Za-z]{3,15}" title="Please enter Valid Name, Name should'nt contain numbers, Name should have atleast 3 characters" required></div>
   <div>Email:</div>
   <div><input type="email" id="email_box" name="email" placeholder="Enter email" pattern="[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,}" required></div>
   <div>Phone Number:</div>
@@ -33,9 +33,11 @@
   <input type="number" id="phno_box" name="phno" placeholder="Phone Number" min="6000000000" max="9999999999" required></div>
   <div>New Password:</div>
 
-  <div><input type="password" name="passwd" placeholder="New Password" id="enter_pass" minlength="8" required></div>
+  <div><input type="password" name="passwd" placeholder="New Password" id="enter_pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password should contain atlest 8 characters, 1 uppercase, 1 lowercase, 1 number or symbol" required></div>
   <div>Confirm Password:</div>
-  <div><input type="password" name="passwd" placeholder="Confirm Pasword" id="confirm_pass" minlength="8" required></div>
+  <div><input type="password" name="passwd" placeholder="Confirm Pasword" id="confirm_pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required></div>
+  <div></div>
+  <div><input type="checkbox" name="checkbox" id="checkbox" onchange="showPass()" style="height: 20px; width: 20px;">Show Password</div>
   <div>Date of Birth:</div>
   <div><input type="date" id="dob_box" max='2011-01-01' min="1960-01-01" required></div>
   <div><button class="btns" type="submit" style="background-color: blue;"><span>Submit</span></button></div>

@@ -46,13 +46,24 @@
       #main-div > div > img{
         height: 250px;
       }
+      .btn-booking{
+        height: 40px;
+        width: 100px;
+        background-color: blue;
+        border: none; 
+        border-radius: 10px;
+        float: right;
+        color: white;
+      }
+
     </style>
   </head>
 
-  <body align="center">
-    <h1>TourTube</h1>
+  <body>
+    <h1 style="text-align: center;">TourTube</h1>
     <div style="margin: 20px">
-      <h1>Maldives</h1>
+      <h1>Maldives</h1> <button onclick="bookPlace('Maldives')" class="btn-booking">Book now</button>
+      <br><br>
       <p class="para">
         <strong> Maldives</strong> officially the Republic of Maldives, is an archipelagic state
         in the Indian subcontinent of Asia, situated in the Indian Ocean. It
@@ -205,5 +216,13 @@
           can be taken up here. Since Rannalhi and Rihiveli beaches are closely
           located, you can easily hop around.</div>
     </div>
+    <script>
+      function bookPlace(place) {
+        const tourDestin = JSON.stringify(place);
+        localStorage.setItem('tour-place', tourDestin);
+        window.location.href = "./../pages/booking.html";
+      }
+    </script>
+      
   </body>
 </html>

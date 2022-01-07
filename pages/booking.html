@@ -35,8 +35,7 @@
         <div id="main-div">
          <div id="left-panel" class="box">
           <div>
-            <input type="text" id="name_box" name="name" placeholder="Enter Name" size="larger" 
-            onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" pattern="[A-Za-z]{3,15}" required>
+            <input type="text" id="name_box" name="name" placeholder="Enter Name" size="larger" pattern="[A-Za-z]{3,15}" title="Please enter a valid name, name should'nt contain any number, name should have atleast 3 characters" required>
             <input type="email" id="email_box" name="email" placeholder="Enter Email" pattern="[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,}" required>
             <br>
             <select id="ccode_box" name="ccode">
@@ -53,8 +52,8 @@
           <label style="font-size: medium;" for="t&c">Accept to the Terms and Conditions of TourTube.</label>
           </div>
         
-        <div id="avatar-div"><img src="./../assets/img/avatar.png" id="avatar" style="width: 130px; height: auto; border: 1px solid crimson;" alt="">
-        <input type="file" name="avatar" id="file" oninput="avatarSelect()">
+        <div id="avatar-div"><img src="./../assets/img/avatar.png" id="avatar" style="width: 130px; height: auto;" alt="">
+        <input type="file" name="avatar" id="file">
       </div>
       </div>
         <div id="right-panel" class="box">

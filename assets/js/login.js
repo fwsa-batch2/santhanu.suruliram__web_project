@@ -47,3 +47,21 @@ function isUserExist(paramemail, parampassword) {
   return isExist;
 
 }
+
+function adminLogin() {
+  document.getElementById('log-form').innerHTML = `<h3>Enter Admin Key:</h3>
+  <input type="password" id="admin-key" required>
+  <button type="submit" onclick = "adminSubmitHandler()" class="button" style="background-color:blue;">Submit</button>
+  `;
+  document.getElementById('admin-btn').style.display = "none";
+}
+function adminSubmitHandler() {
+  const key = "tourtube";
+  const keyFromUser = document.getElementById('admin-key').value;
+  if(key == keyFromUser){
+    localStorage.setItem("current_loggedin_user", "admin");
+    window.location.href = "./../../index.html";
+  }else {
+    alert('The key is invalid, Try again!!');
+  }
+}

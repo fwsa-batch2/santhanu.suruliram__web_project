@@ -37,12 +37,24 @@
       #main-div > div > img{
         height: 200px;
       }
-
+      .btn-booking{
+        height: 40px;
+        width: 100px;
+        background-color: blue;
+        border: none; 
+        border-radius: 10px;
+        float: right;
+        color: white;
+      }
     </style>
+
   </head>
-  <body align="center">
+  <body>
     <h1 style="color: white; font-family: sans-serif;">TourTube</h1>
-    <h1 style="font-size: large; float: left;">Hawaii (US):</h1> <br>
+    
+    <h1 style="font-size: large; float: left;">Hawaii (US):</h1> 
+    <button onclick="bookPlace('Maldives')" class="btn-booking">Book now</button>
+    <br>
     <p style="margin: 30px">
       Hawaii is a U.S. state that is an archipelago in the Pacific Ocean. Of the
       eight major islands, Hawaii, Oʻahu, Maui, and Kauaʻi have major tourism
@@ -65,7 +77,7 @@
     <img src="../assets/img/hawaii1.jpeg" alt=""/>
     <div>
       <h1 style="font-size: large">Location in Map:</h1>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6009575.998054504!2d-162.35575107587658!3d20.408886895461393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bffdb064f79e005%3A0x4b7782d274cc8628!2sHawaii%2C%20USA!5e0!3m2!1sen!2sin!4v1636610275872!5m2!1sen!2sin" width="1000"height="450"
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6009575.998054504!2d-162.35575107587658!3d20.408886895461393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bffdb064f79e005%3A0x4b7782d274cc8628!2sHawaii%2C%20USA!5e0!3m2!1sen!2sin!4v1636610275872!5m2!1sen!2sin" width="100%" height="700"
         style="border: 0" allowfullscreen="" loading="lazy" title="maps"></iframe>
     </div>
     <p style="margin: 30px">
@@ -285,5 +297,12 @@
           provide horseback riding tours of the valley, allowing you to enjoy
           the sights from a different perspective.</div>
     </div>
+  <script>
+    function bookPlace(place) {
+      const tourDestin = JSON.stringify(place);
+      localStorage.setItem('tour-place', tourDestin);
+      window.location.href = "./../pages/booking.html";
+    }
+  </script>
   </body>
 </html>

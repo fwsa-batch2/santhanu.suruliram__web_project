@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="../assets/css/loginpage.css" />
-  <link rel="icon" type="image/x-icon" href="./../assets/img/favicon.ico">
+  
   <title>TourTube Login</title>
 </head>
 
@@ -14,7 +14,7 @@
   
   <h1>TourTube Login</h1>
  
-  <form align="center"  style="font-family: sans-serif; font-size: xx-large;color: white;" onsubmit="submitHandler()">
+  <form align="center"  style="font-family: sans-serif; font-size: xx-large;color: white;" onsubmit="submitHandler()" id="log-form">
     <label for="name">User Email:</label><input type="text" id="email_box" style="margin: 20px" name="email"
       placeholder="Enter Email" size="larger" required /><br />
     <label for="passwd">Password:</label><input type="password" style="margin: 20px" name="passwd" id="password"
@@ -38,6 +38,7 @@
       <a href="../index.html"><span>Cancel</span></a>
     </button>
   </form>
+  <button type="button" class="button" style="background-color: blueviolet; width: 170px; position: absolute; bottom: 10px; right: 10px;" id="admin-btn" onclick="adminLogin()">Login as Admin</button>
   <script src="./../assets/js/login.js"></script>
 </body>
 

@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../assets/css/home.css" />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+    <style>
+      #tour-content > div > div {
+        float: left;
+      }
+    </style>
     <title>TourTube Home</title>
   </head>
   <body align="center">
@@ -20,20 +25,15 @@
         <li><a href="./pages/contact.html">Contact</a></li>
         <li><a href="./pages/aboutus.html">About Us</a></li>
       </ul></div>
-      <div id="btn-areac">
+      <div id="btn-area">
         <button class="btns" id="login"><a href="./pages/tourlogin.html" style="color: white;">Login</a></button>
         <button class="btns" id="register" style="background-color: red;"><a href="./pages/tourreg.html" style="color: white;">Register</a></button>
       </div>
     </header>
     
     <div id="searchbar">
-      <input
-        type="search"
-        name="search-places"
-        placeholder="Search Places Here"
-        style=" height: 40px; outline: none;"
-      />
-      <a href="#"><img src="./assets/img/loupe.png" style="height: 30px; margin-bottom: -9px;" alt=""></a>
+      <input type="text" name="search-places" id="search" placeholder="Search Places Here" style=" height: 40px; outline: none;"/>
+      <button style="border: none; background-color: transparent;" onclick="search()"><img src="./assets/img/loupe.png" style="height: 30px;" alt="search"></button>
     </div>
 <div id="widget">
   <div>
@@ -67,6 +67,7 @@
           islands, and is located in the continent of Asia. The chain of islands
           is to the south-west of India and Sri Lanka and stretches over 871 km.
           <br>
+          <div>⭐⭐⭐⭐⭐ 5 </div>
           <button type="button" class="btns-booking" onclick="bookPlace('Maldives')">Book now</button>
   </div>
   <div>
@@ -76,6 +77,7 @@
         Ocean about 2,000 miles from the U.S. mainland. It is the only state
         outside North America, the only state that is an archipelago, and the
         only state in the tropics. <br> 
+        <div>⭐⭐⭐⭐⭐ 5 </div>
         <button type="button" class="btns-booking" onclick="bookPlace('Hawaii')">Book now</button>
   </div>
 
@@ -86,6 +88,7 @@
         1956, following the passage of the States Reorganisation Act, by
         combining Malayalam-speaking regions of the erstwhile regions of Cochin,
         Malabar, South Canara, and Travancore. <br>
+        <div>⭐⭐⭐⭐ 4 </div>
         <button type="button" class="btns-booking" onclick="bookPlace('Kerala')">Book now</button>
   </div>
 
@@ -98,6 +101,7 @@
         as well as Luxor's hieroglyph-lined Karnak Temple and Valley of the
         Kings tombs. The capital, Cairo, is home to Ottoman landmarks like
         Muhammad Ali Mosque and the Egyptian Museum, a trove of antiquities. <br>
+        <div>⭐⭐⭐⭐ 4 </div>
         <button type="button" class="btns-booking" onclick="bookPlace('Egypt')">Book now</button>
     </div>
 
@@ -109,10 +113,13 @@
         than 1.4 billion. China spans five geographical time zones and borders
         14 different countries, the second most of any country in the world
         after Russia. <br>
+        <div>⭐⭐⭐ 3  </div>
         <button type="button" class="btns-booking" onclick="bookPlace('China')">Book now</button>
       </div>
-    <div><h2 style="color: blue; margin-top: 150px;">See more...</h2></div>
+    
   </div>
+
+
     <button id="scroll_top"><a href="#header" style="font-size: xxx-large;"><img src="./assets/img/arrow_up.png" style="height: 30px; width: 35px;" alt=""></a></button>
     
 <div id="trip-ideas-heading"><h1>Trip ideas</h1></div>
@@ -224,7 +231,29 @@
       </p><button class="btns-booking">Explore</button>
     </div>
   </div>
-  
+<script>
+function timelyMsg(){
+    const date = new Date();
+    const hours = date.getHours();
+    if (hours >= 5 && hours < 12){
+        document.getElementById('imgdiv').innerHTML = '<img src="./assets/img/sunrise.png" style="height: 70px;">';
+        document.getElementById('msg').innerHTML = '<h2>Good Morning!</h2>';
+    }
+    else if (hours >= 12 && hours < 17){
+        document.getElementById('imgdiv').innerHTML = '<img src="./assets/img/mid-day.png" style="height: 70px;">';
+        document.getElementById('msg').innerHTML = '<h2>Good Afternoon!</h2>';
+    }
+    else if(hours >= 17 && hours < 20){
+        document.getElementById('imgdiv').innerHTML = '<img src="./assets/img/sunset.png" style="height: 70px;">';
+        document.getElementById('msg').innerHTML = '<h2>Good Evening!</h2>';
+    }
+    else {
+        document.getElementById('imgdiv').innerHTML = '<img src="./assets/img/night.png" style="height: 70px;">';
+        document.getElementById('msg').innerHTML = '<h2>Good Night!</h2>';
+    }
+}
+timelyMsg();
+</script>
 <script src="./main.js"> </script>
 </body>
 

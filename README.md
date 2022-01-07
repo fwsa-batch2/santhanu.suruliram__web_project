@@ -6,6 +6,8 @@
 1. Login Page (Completed)
 2. Registration page (Completed)
 3. Forgot password (completed)
+4. Tour booking (completed)
+5. Adding Tour-Packages by Admin (completed) 
 
 ### Register Page
 
@@ -26,3 +28,11 @@
 * Un-registered email is not accepted.
 * New password and confirm password input boxes unlocks, after entering the correct 6 digit code.
 * The new password is update to the local storage, and redirects to the login page.
+
+### Tour Booking Feature:
+* Trip is booked and stored in Local storage.
+* The booked trips are listed in the My trips page.
+
+### Adding tour-packages (Admin):
+* The details about the tour Package is collected and stored in Local storage.
+* The newly added packages are listed in the Holiday Packages and in Home page as well. 

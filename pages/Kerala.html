@@ -38,12 +38,23 @@
       #main-div > div > img{
         height: 300px;
       }
+      .btn-booking{
+        height: 40px;
+        width: 100px;
+        background-color: blue;
+        border: none; 
+        border-radius: 10px;
+        float: right;
+        color: white;
+      }
+
     </style>
   </head>
 
-  <body align="center">
-    <h1 style="color: white; font-family: sans-serif;">TourTube</h1>
+  <body>
+    <h1 style="color: white; font-family: sans-serif; text-align: center;">TourTube</h1>
     <h1 style="font-family: sans-serif; color: white; margin-left: 20px;">Kerala(India)</h1>
+    <button onclick="bookPlace('Maldives')" class="btn-booking">Book now</button> <br>
     <div>
       <img src="../assets/img/keralapics.jpg" alt=""/>
       <img src="../assets/img/keralapics1.webp" alt=""/>
@@ -258,5 +269,13 @@
           INR/per night*
         </p></div>
     </div>
+    <script>
+      function bookPlace(place) {
+        const tourDestin = JSON.stringify(place);
+        localStorage.setItem('tour-place', tourDestin);
+        window.location.href = "./../pages/booking.html";
+      }
+    </script>
+  
   </body>
 </html>

@@ -1,29 +1,13 @@
-function timelyMsg(){
-    const date = new Date();
-    const hours = date.getHours();
-    if (hours >= 5 && hours < 12){
-        document.getElementById('imgdiv').innerHTML = '<img src="./assets/img/sunrise.png" style="height: 50px;">';
-        document.getElementById('msg').innerHTML = '<h2>Good Morning!</h2>';
-    }
-    else if (hours >= 12 && hours < 17){
-        document.getElementById('imgdiv').innerHTML = '<img src="./assets/img/mid-day.png" style="height: 50px;">';
-        document.getElementById('msg').innerHTML = '<h2>Good Afternoon!</h2>';
-    }
-    else if(hours >= 17 && hours < 20){
-        document.getElementById('imgdiv').innerHTML = '<img src="./assets/img/sunset.png" style="height: 50px;">';
-        document.getElementById('msg').innerHTML = '<h2>Good Evening!</h2>';
-    }
-    else {
-        document.getElementById('imgdiv').innerHTML = '<img src="./assets/img/night.png" style="height: 50px;">';
-        document.getElementById('msg').innerHTML = '<h2>Good Night!</h2>';
-    }
-}
-timelyMsg();
 
 var loggedInUser = localStorage.getItem('current_loggedin_user');
 if(loggedInUser != null){
-    document.getElementById('btn-area').innerHTML = '<button class="btns" style="background-color:green;" onclick="logOut()">Log Out</button>'
+    document.getElementById('btn-area').innerHTML = '<button class="btns" style="background-color:green;" onclick="logOut()">Log Out</button>';
+    if (loggedInUser == "admin") {
+        document.getElementById('btn-area').innerHTML = `<button class="btns" style="background-color:green;" onclick="logOut()">Log Out</button>
+        <a href="./pages/add-packages.html"><button class="btns">Add</button></a>`;
+    }
 }
+
 function loginRecommendation() {
     if(loggedInUser === null){
         if (confirm('Please Login to get more Touring details!')){
@@ -42,6 +26,46 @@ function bookPlace(place) {
 function logOut() {
     localStorage.removeItem('current_loggedin_user');
     window.location.reload();
+}
+const packFromLs = JSON.parse(localStorage.getItem('addedPackages'));
+function listNewPackages() {
+    if ( packFromLs != null){
+        packFromLs.forEach(addPackages);
+    }
+}
+listNewPackages();
+function addPackages(item) {
+    document.getElementById('tour-content').innerHTML += `<div>
+    <a href=""><img src="${item.cover_image}" alt=""></a>
+    <br> <h3>${item.place_name}</h3> <br>
+    ${item.content} <br>
+    <button type="button" class="btns-booking" onclick="bookPlace('${item.place_name}')">Book now</button>
+    </div>`
+}
+
+
+
+function search() {
+    
+    let searchInput = document.getElementById('search').value.toLowerCase;
+    switch(searchInput){
+        case "hawaii" : 
+            console.log('working');
+            window.location.href = "./pages/hawaii.html";
+            break
+        case "maldives" : 
+            window.location.href = "./pages/Maldives.html";
+            break
+        case "egypt" :
+            window.location.href = "./pages/Egypt.html";
+            break
+        case "kerala" :
+            window.location.href = "./pages/Kerala.html";
+            break
+        case "china" :
+            window.location.href = "./pages/Chinese_temple.html";
+            break
+    }
 }
 
 

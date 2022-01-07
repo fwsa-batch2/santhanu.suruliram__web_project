@@ -55,6 +55,16 @@ function emailValid(current_email) {
    return isUsed;
 }
 
+function showPass() {
+    const checkBox = document.getElementById('checkbox');
+    if (checkBox.checked){
+        document.getElementById('enter_pass').type = 'text';
+        document.getElementById('confirm_pass').type = "text";
+    } else {
+        document.getElementById('enter_pass').type = 'password';
+        document.getElementById('confirm_pass').type = "password";
+    }
+}
 
 
 
