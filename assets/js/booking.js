@@ -6,6 +6,22 @@ imgInp.onchange = function(){
     console.log(URL.createObjectURL(files[0]));
   }
 };
+
+function dateLimitations() {
+  const data = new Date();
+  let month = JSON.stringify(data.getMonth()+1);
+  let date = JSON.stringify(data.getDate());
+  if(date.length == 1){
+    date = '0'+ date;
+  }
+  if(month.length == 1){
+    month = "0"+ month;
+  }
+  const today = `${data.getFullYear()}-${month}-${date}`
+  document.getElementById('board-date').min = `${today}`;
+  document.getElementById('end-date').min = `${today}`;
+}
+dateLimitations();
 let userBookings = [];
 function onPageLoad() {
   let getFromLs = JSON.parse(localStorage.getItem("User-Bookings"));

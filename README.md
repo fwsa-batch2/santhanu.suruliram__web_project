@@ -1,5 +1,6 @@
 ### html-project-template
 # Netlify Link : https://tourtubeapp-ui-santhanu.netlify.app/
+# SonarCloud Link: https://sonarcloud.io/project/overview?id=fwsa-batch-02_tourtubeapp-ui
 # Main Link : https://tourtube.fwsa.in/
 
 ### Features
@@ -7,12 +8,14 @@
 2. Registration page (Completed)
 3. Forgot password (completed)
 4. Tour booking (completed)
-5. Adding Tour-Packages by Admin (completed) 
-
+5. My trips (completed)
+6. Adding Tour-Packages by Admin (completed) 
+7. Tour Packages (completed)
+8. user query to admin(on progress)
 ### Register Page
 
 * All inputs fields are mandatory
-* Username can't be empty and username should contain atleast 3 characters 
+* Username can't be empty and username should contain atleast 3 characters , username should not contain any number.
 * Email Id should contain atleast two characters before "@" and should have "."
 * Password should have minimum 8 characters and it should have atleast one uppercase and special chracter
 
@@ -31,8 +34,18 @@
 
 ### Tour Booking Feature:
 * Trip is booked and stored in Local storage.
-* The booked trips are listed in the My trips page.
+* All input fields are mandatory, except the photo file input (optional).
+* Name should contain atleast 3 characters, name should not contain any numbers in it.
+
+### My trips:
+* If the stored list is empty , "your trip list is empty" is printed.
+* If the trip exists, trips are listed, in ordered manner.
 
 ### Adding tour-packages (Admin):
 * The details about the tour Package is collected and stored in Local storage.
-* The newly added packages are listed in the Holiday Packages and in Home page as well. 
+* Input fields are mandatory
+* Place Name must contain atleast 3 characters.
+
+
+### Tour-Packages:
+* The stored tour packages are listed in both Tour packages page and in main(home) page in ordered manner.
