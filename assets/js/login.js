@@ -7,7 +7,7 @@ function show_pass() {
     document.getElementById('password').type = "password";
   }
 }
-function submitHandler() {
+function submitHandler(event) {
   event.preventDefault();
   let email = document.getElementById("email_box").value;
   let password = document.getElementById("password").value;
