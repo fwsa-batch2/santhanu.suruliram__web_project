@@ -1,4 +1,3 @@
-
 input{
     height: 40px;
     width: 500px;
@@ -25,7 +24,6 @@ input{
     background-color: rgb(109, 109, 109);
     padding: 15px;
     border-radius: 5px;
-
 }
 #left-panel{
     display: grid;
@@ -38,26 +36,18 @@ input{
 #right-panel{
     text-align: center;
 }
-#payment-list{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+#pay-select {
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
 }
-#payment-list > li{
-    display: inline-block;
-    text-align: center;
+#pay-select > option {
+    height: 50px;
+    width: 200px;
+    font-size: large;
 }
-#payment-list > li > img{
-    height: 150px;
-    
-}
-#payment-list > li > p {
-    font-size: medium;
-    color: white;
-}
-.radio-btns{
-    height: 30px;
-    width: 30px;
-    
+#payment-div > img {
+    height: 200px;
 }
 .form-btns {
     height: 50px;
@@ -67,4 +57,3 @@ input{
     font-size: large;
     margin-top: 7px;
 }
-

@@ -8,19 +8,44 @@
     <link rel="icon" type="image/x-icon" href="./../assets/img/favicon.ico">
     <title>TourTube Support</title>
     <style>
+      
       #inp {
         background-color: black;
         color: white;
         width: 600px;
         height: 40px;
+        border-radius: 5px;
+        outline: none;
       }
+      
       .btn {
         color: white;
         background-color: blue;
         height: 35px;
         width: 100px;
         border: none;
-        border-radius: 15px;
+        border-radius: 5px;
+      }
+      #feedback{
+        margin-top: 10px;
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+        width: fit-content;
+        padding: 10px;
+        margin-left: 20%;
+      }
+      #star {
+        color: yellow;
+      }
+      #fb-div{
+        text-align: left;
+        background-color: grey;
+        margin: 4px;
+        padding: 5px;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 3px -3px 9px rgb(128, 128, 128);
       }
     </style>
   </head>
@@ -37,8 +62,7 @@
         <li><a href="./aboutus.html">About Us</a></li>
       </ul></div>
       <div>
-        <button class="btns"><a href="./tourlogin.html" style="color: white;">Login</a></button>
-        <button class="btns" style="background-color: red;"><a href="./tourreg.html" style="color: white;">Register</a></button>
+        
       </div>
     </header>
 
@@ -47,25 +71,24 @@
       <input type="search" id="inp" placeholder="Search queries here" />
       <button class="btn">Search</button>
     </div>
-    <div class="support">
-      <h1 style="font-size: large">
-        (or) &nbsp; &nbsp; Talk to our Virtual Support Assistant!
-      </h1>
-      <div style="background-color: gray; border-radius: 10px; padding: 10px; height: 300px;">
-        <p style="background-color: blue; color: white; border-radius: 10px; width: 200px; height: 30px; padding-top: 9px;">
-          Hi! Need any help?
-        </p>
-        <br /><br /><br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <input type="text" placeholder="type to chat" style="background-color: black; width: 650px; height: 40px; color: white; "/>
-        <button class="btn">Enter</button>
+    <div id="feedback">
+      <div id="feedback-area"> Feedbacks:</div> <hr>
+      <h3>Send us Your Feedback:</h3>
+      <div id="feedback-write-area">
+        <form onsubmit="submitFeedback()">
+        <textarea id="feedback-input" cols="89" rows="10" style="background-color: black; color: white; border-radius: 5px; font-size: large;"> </textarea> 
+        <br> Your Rating:
+        <select name="rating" id="rating" style="height: 40px; background-color: grey; color: yellow;">
+          <option value="★★★★★">★★★★★</option>
+          <option value="★★★★☆">★★★★☆</option>
+          <option value="★★★☆☆">★★★☆☆</option>
+          <option value="★★☆☆☆">★★☆☆☆</option>
+          <option value="★☆☆☆☆">★☆☆☆☆</option>
+        </select>
+        <button type="submit" class="btn">Submit</button>
+        </form>
       </div>
     </div>
+    <script src="../assets/js/support.js"></script>
   </body>
 </html>

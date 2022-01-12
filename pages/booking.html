@@ -67,14 +67,15 @@
         </div>
         <br>
         <div class="box">
-          <img src="./../assets/img/payment-cash.png" style="height: 20px;" alt=""> Payment Option: <p style="color: white; font-size: medium;">(Coming soon..)</p>
-          <ul id="payment-list">
-            <li><img src="./../assets/img/payment-bank-transfer.png" alt=""> <br> <input type="radio" name="pay" class="radio-btns"> <p>Bank transfer</p> </li>
-            <li><img src="./../assets/img/payment-upi.png" alt=""> <br> <input type="radio" name="pay"  class="radio-btns"><p>UPI</p></li>
-            <li><img src="./../assets/img/payment-card.png" alt=""><br> <input type="radio" name="pay"  class="radio-btns"><p>Card</p></li>
-            <li><img src="./../assets/img/payment-net-banking.png" alt=""><br> <input type="radio" name="pay" class="radio-btns"><p>Net Banking</p></li>
-            <li><img src="./../assets/img/payment-cash.png" alt=""> <br><input type="radio" name="pay" class="radio-btns"><p>Cash</p></li>
-          </ul>
+          Payment Option: 
+          <select name="pay" id="pay-select" onchange="paySelection()">
+            <option value="card" selected>Card</option>
+            <option value="upi">UPI</option>
+            <option value="net-banking">Net Banking</option>
+          </select>
+          <div id="payment-div">
+
+          </div>
         </div>
         <div style="text-align: center;">
           <button class="form-btns" type="submit" style="background-color: greenyellow; margin-left: 80px;"><span style="color: black;">Submit</span></button>

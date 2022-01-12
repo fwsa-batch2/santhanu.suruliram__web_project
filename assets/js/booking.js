@@ -22,6 +22,7 @@ function dateLimitations() {
   document.getElementById('end-date').min = `${today}`;
 }
 dateLimitations();
+
 let userBookings = [];
 function onPageLoad() {
   let getFromLs = JSON.parse(localStorage.getItem("User-Bookings"));
@@ -47,6 +48,7 @@ function bookTrip(){
   const boardDate = document.getElementById('board-date').value;
   const endDate = document.getElementById('end-date').value;
   const place = JSON.parse(localStorage.getItem('tour-place'));
+  const payMethod = document.getElementById('pay-select').value;
   const tripObj = {
     "name": name,
     "email": email,
@@ -55,11 +57,25 @@ function bookTrip(){
     "no_of_children": nChildren,
     "date_of_boarding": boardDate,
     "date_of_ending": endDate,
+    "payment_method": payMethod,
     "destination": place
   }
-    userBookings.push(tripObj);
+    userBookings.unshift(tripObj);
     localStorage.setItem('User-Bookings', JSON.stringify(userBookings));
     alert('Your Booking is Successfull!');
     window.location.href = "./../../index.html";
 }
+ 
+function paySelection() {
+  const payMethod = document.getElementById('pay-select').value;
+  if (payMethod == 'card'){
+    document.getElementById('payment-div').innerHTML = `<img src='../assets/img/payment-card.png'>`
+  } else if(payMethod == 'upi'){
+    document.getElementById('payment-div').innerHTML = `<img src='../img/payment-upi.png'>`
+  } else {
+    document.getElementById('payment-div').innerHTML = `<img src='../img/payment-net-banking.png'>`
+  }
+}
+  
+
 
