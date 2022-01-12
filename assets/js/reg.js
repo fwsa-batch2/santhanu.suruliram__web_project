@@ -7,6 +7,7 @@ function onPageLoad() {
 }
 onPageLoad();
 function submitHandler() {
+    event.preventDefault();
     const username = document.getElementById("name_box").value;
     const email = document.getElementById("email_box").value;
     const phno = document.getElementById("phno_box").value;

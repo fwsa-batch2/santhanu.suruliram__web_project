@@ -8,6 +8,7 @@ function show_pass() {
   }
 }
 function submitHandler() {
+  event.preventDefault();
   let email = document.getElementById("email_box").value;
   let password = document.getElementById("password").value;
   const isExist = isUserExist(email, password);
