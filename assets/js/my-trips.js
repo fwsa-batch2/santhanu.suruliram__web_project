@@ -7,7 +7,6 @@ function listTrip() {
     }
  }
 listTrip();
-
 function listify(item) {
     document.getElementById('trip-div').innerHTML += `<div>Touring Destination: <p>${item.destination}</p></div>
         <div>Date of Boarding: <p>${item.date_of_boarding}</p></div>

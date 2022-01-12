@@ -6,7 +6,6 @@ imgInp.onchange = function(){
     console.log(URL.createObjectURL(files[0]));
   }
 };
-
 function dateLimitations() {
   const data = new Date();
   let month = JSON.stringify(data.getMonth()+1);
@@ -22,7 +21,6 @@ function dateLimitations() {
   document.getElementById('end-date').min = `${today}`;
 }
 dateLimitations();
-
 let userBookings = [];
 function onPageLoad() {
   let getFromLs = JSON.parse(localStorage.getItem("User-Bookings"));
@@ -36,9 +34,7 @@ function onPageLoad() {
   } 
 }
 onPageLoad();
-
 function bookTrip(){
-  event.preventDefault();
   const name = document.getElementById('name_box').value;
   const email = document.getElementById('email_box').value;
   const ccode = document.getElementById('ccode_box').value;
@@ -77,5 +73,3 @@ function paySelection() {
   }
 }
   
-
-

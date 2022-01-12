@@ -1,4 +1,5 @@
 let feedbackList = [];
+let feedbackObj;
 function loadFromLs() {
     const getFromLS_feedbackList = JSON.parse(localStorage.getItem('feedbackList'));
     if (getFromLS_feedbackList != null){
@@ -7,9 +8,7 @@ function loadFromLs() {
     }
 }
 loadFromLs();
-
 function submitFeedback() {
-    event.preventDefault();
     const feedback = document.getElementById('feedback-input').value;
     const rating = document.getElementById('rating').value;
     const getFromLsCurrentEmail = localStorage.getItem('current_loggedin_user');
@@ -17,7 +16,20 @@ function submitFeedback() {
     let i, username;
     if (getFromLsCurrentEmail == null){
         alert('Kindly Login before sending us your Feedback!');
-    } else {
+    }
+    else if(getFromLsCurrentEmail == "Admin"){
+        console.log(getFromLsCurrentEmail)
+        username = getFromLsCurrentEmail;
+        feedbackObj = {
+            'username' : username,
+            'rating' : rating,
+            'feedback': feedback,
+        };
+        feedbackList.unshift(feedbackObj);
+        localStorage.setItem('feedbackList', JSON.stringify(feedbackList));
+        window.location.reload();
+    } 
+    else {
         for (i=0; i < getFromLS.length; i++){
             const user = getFromLS[i];
             const email = user.email;
@@ -26,7 +38,7 @@ function submitFeedback() {
                 break;
             }
         }
-        const feedbackObj = {
+        feedbackObj = {
             'username' : username,
             'rating' : rating,
             'feedback': feedback,

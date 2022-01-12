@@ -1,13 +1,11 @@
-
 var loggedInUser = localStorage.getItem('current_loggedin_user');
 if(loggedInUser != null){
     document.getElementById('btn-area').innerHTML = '<button class="btns" style="background-color:green;" onclick="logOut()">Log Out</button>';
-    if (loggedInUser == "admin") {
+    if (loggedInUser == "Admin") {
         document.getElementById('btn-area').innerHTML = `<button class="btns" style="background-color:green;" onclick="logOut()">Log Out</button>
         <a href="./pages/add-packages.html"><button class="btns">Add</button></a>`;
     }
 }
-
 function loginRecommendation() {
     if(loggedInUser === null){
         if (confirm('Please Login to get more Touring details!')){
@@ -16,13 +14,11 @@ function loginRecommendation() {
     }
 }
 setTimeout(loginRecommendation, 5000);
-
 function bookPlace(place) {
     const tourDestin = JSON.stringify(place);
     localStorage.setItem('tour-place', tourDestin);
     window.location.href = "./pages/booking.html";
 }
-
 function logOut() {
     localStorage.removeItem('current_loggedin_user');
     window.location.reload();
@@ -42,9 +38,6 @@ function addPackages(item) {
     <button type="button" class="btns-booking" onclick="bookPlace('${item.place_name}')">Book now</button>
     </div>`
 }
-
-
-
 function search() {
     
     let searchInput = document.getElementById('search').value.toLowerCase;
@@ -67,5 +60,3 @@ function search() {
             break
     }
 }
-
-

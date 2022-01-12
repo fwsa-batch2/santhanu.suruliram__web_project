@@ -6,7 +6,6 @@ if (file) {
     }};
 var imgFile = document.getElementById("img");
 var imgAsDataURL;
-
 imgFile.addEventListener("load", function () {
     var imgCanvas = document.createElement("canvas"),
     imgContext = imgCanvas.getContext("2d");
@@ -22,7 +21,6 @@ imgFile.addEventListener("load", function () {
     }
     return imgAsDataURL;
     }, false); 
-
 let packList = [];
 function onPageLoad() {
     const getFromLs = JSON.parse(localStorage.getItem('addedPackages'));
@@ -32,9 +30,7 @@ function onPageLoad() {
     }
 }
 onPageLoad();
-
 function addPackage() {
-    event.preventDefault();
     const placeName = document.getElementById('place-name').value;
     const content = document.getElementById('content').value;
     const packObj = {

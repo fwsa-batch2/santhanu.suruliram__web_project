@@ -1,5 +1,4 @@
 let userList = [];
-
 function onPageLoad() {
     let getFromLs = JSON.parse(localStorage.getItem("usersname"));
     if (getFromLs != null) {
@@ -7,9 +6,7 @@ function onPageLoad() {
     }
 }
 onPageLoad();
-
 function submitHandler() {
-    event.preventDefault();
     const username = document.getElementById("name_box").value;
     const email = document.getElementById("email_box").value;
     const phno = document.getElementById("phno_box").value;
@@ -32,7 +29,6 @@ function submitHandler() {
             "phone-number": phno,
             "password": password,
         }
-
         userList.push(customerDetail);
         let userslists=JSON.stringify(userList);
         localStorage.setItem("usersname",userslists);
@@ -40,7 +36,6 @@ function submitHandler() {
         window.location.href = "../../pages/tourlogin.html";
     }
 }
-
 function emailValid(current_email) {
     let isUsed = false;
     let i;
@@ -54,7 +49,6 @@ function emailValid(current_email) {
     }
    return isUsed;
 }
-
 function showPass() {
     const checkBox = document.getElementById('checkbox');
     if (checkBox.checked){
@@ -65,30 +59,3 @@ function showPass() {
         document.getElementById('confirm_pass').type = "password";
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

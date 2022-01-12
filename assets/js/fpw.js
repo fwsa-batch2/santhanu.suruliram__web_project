@@ -1,4 +1,3 @@
-
 function randomCode() {
     let rand =  Math.random();
     return (Math.floor((rand * 999999) + 100000)) ;
@@ -20,9 +19,7 @@ function sendEmail() {
         alert("mail sent successfully");
       });
 }
-
 function fpwProtocol(){
-
     let email = document.getElementById('email').value;
     let emailExist = checkForEmail(email);
     if (emailExist){
@@ -49,7 +46,6 @@ function checkForEmail(emailInput) {
     }
     return emailExist;
 }
-
 function mainFunc() {
     let codeFromUser = document.getElementById('code').value;
     if (codeFromUser == code){
@@ -62,7 +58,6 @@ function mainFunc() {
   
     }
 }
-
 function updatePass() {
     let email = document.getElementById('email').value;
     let getFromLs = JSON.parse(localStorage.getItem('usersname'));
@@ -86,7 +81,6 @@ function updatePass() {
         document.getElementById('msg3').innerText = 'Passwords do not Match :(' ;
     }
 }
-
 function show_pass() {
     let checkBox = document.getElementById('show-pass');
   
