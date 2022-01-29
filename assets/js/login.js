@@ -7,17 +7,29 @@ function show_pass() {
     document.getElementById('password').type = "password";
   }
 }
-const userDetails = JSON.parse(localStorage.getItem("userList"));
 let loggedinUsername;
-
+function getFromLs(key) {
+  let dataFromLs = [];
+  const fromLs = JSON.parse(localStorage.getItem(key));
+  if (fromLs != null){
+    dataFromLs = fromLs;
+  }
+  return dataFromLs;
+}
+function setToLs(key, data){
+  let parsedData;
+  if (typeof(data) != 'string'){
+    parsedData = JSON.stringify(data);
+  }
+  localStorage.setItem(key, parsedData);
+}
 function submitHandler(event) {
   event.preventDefault();
   let email = document.getElementById("email_box").value;
   let password = document.getElementById("password").value;
   const isExist = isUserExist(email, password);
-  
   if (isExist) {
-    localStorage.setItem("current_loggedin_user", JSON.stringify([email, loggedinUsername]));
+    setToLs('current_loggedin_user', [email, loggedinUsername]);
     window.location.href = "./../../index.html"
   }
   else {
@@ -27,10 +39,8 @@ function submitHandler(event) {
 }
 function isUserExist(paramemail, parampassword) {
   let isExist;
-  if(userDetails == null){
-    isExist = false;
-  } else {
-    let i;
+  const userDetails = getFromLs('userList');
+  let i;
   for ( i = 0; i < userDetails.length; i++) {
     const user = userDetails[i];
     const userEmail = user.email;
@@ -41,9 +51,9 @@ function isUserExist(paramemail, parampassword) {
       break;
     }
   }
-  }
   return isExist;
 }
+
 function adminLogin() {
   document.getElementById('log-form').innerHTML = `<h3>Enter Admin Key:</h3>
   <input type="password" id="admin-key" required>

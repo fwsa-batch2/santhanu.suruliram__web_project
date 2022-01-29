@@ -1,17 +1,14 @@
-
 function getFromLs(){
-    const fromLs = localStorage.getItem('userList');
+    const fromLs = JSON.parse(localStorage.getItem('userList'));
     let userList = [];
     if (fromLs != null){
-        userList = fromLs;
-        if (typeof(userList) == "string"){
-            return userList;
-        }
-        return JSON.parse(userList);
+        userList = fromLs;   
     }
+    return userList;
 }
+console.log(getFromLs())
 function setToLs(key ,userDetails) {
-    let userList = JSON.parse(getFromLs());
+    let userList = getFromLs();
     userList.push(userDetails);
     localStorage.setItem(key, JSON.stringify(userList));
     alert('You have been successfully registered! You will be redirected to Login')
@@ -43,7 +40,7 @@ function submitHandler(event) {
 }
 
 function emailValid(current_email) {
-    let userList = JSON.parse(getFromLs());
+    let userList = getFromLs();
     let isUsed = false;
     let i;
     for (i = 0; i < userList.length; i++) {
