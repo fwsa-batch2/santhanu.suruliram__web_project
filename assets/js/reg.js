@@ -1,11 +1,23 @@
-let userList = [];
-function onPageLoad() {
-    let getFromLs = JSON.parse(localStorage.getItem("usersname"));
-    if (getFromLs != null) {
-        userList = getFromLs;
+
+function getFromLs(){
+    const fromLs = localStorage.getItem('userList');
+    let userList = [];
+    if (fromLs != null){
+        userList = fromLs;
+        if (typeof(userList) == "string"){
+            return userList;
+        }
+        return JSON.parse(userList);
     }
 }
-onPageLoad();
+function setToLs(key ,userDetails) {
+    let userList = JSON.parse(getFromLs());
+    userList.push(userDetails);
+    localStorage.setItem(key, JSON.stringify(userList));
+    alert('You have been successfully registered! You will be redirected to Login')
+    window.location.href = "../../pages/tourlogin.html";
+}
+
 function submitHandler(event) {
     event.preventDefault();
     const username = document.getElementById("name_box").value;
@@ -13,31 +25,25 @@ function submitHandler(event) {
     const phno = document.getElementById("phno_box").value;
     const password = document.getElementById("enter_pass").value;
     const confirmPassword = document.getElementById("confirm_pass").value;
-    
     const isEmailAlreadyExist = emailValid(email);
-    if(isEmailAlreadyExist){
+    if (isEmailAlreadyExist) {
         alert("Email already exist");
     }
-    else if(username == "" ){
-        alert('empty parameters');
-    }
-    else if(password != confirmPassword ) {
+    else if (password != confirmPassword) {
         alert("please check your password")
     } else {
-        const customerDetail = {
+        const userDetails = {
             "username": username,
             "email": email,
             "phone-number": phno,
             "password": password,
         }
-        userList.push(customerDetail);
-        let userslists=JSON.stringify(userList);
-        localStorage.setItem("usersname",userslists);
-        alert('You have been successfully registered! You will be redirected to Login')
-        window.location.href = "../../pages/tourlogin.html";
+        setToLs('userList', userDetails);
     }
 }
+
 function emailValid(current_email) {
+    let userList = JSON.parse(getFromLs());
     let isUsed = false;
     let i;
     for (i = 0; i < userList.length; i++) {
@@ -48,11 +54,11 @@ function emailValid(current_email) {
             break;
         }
     }
-   return isUsed;
+    return isUsed;
 }
 function showPass() {
     const checkBox = document.getElementById('checkbox');
-    if (checkBox.checked){
+    if (checkBox.checked) {
         document.getElementById('enter_pass').type = 'text';
         document.getElementById('confirm_pass').type = "text";
     } else {
@@ -60,3 +66,5 @@ function showPass() {
         document.getElementById('confirm_pass').type = "password";
     }
 }
+
+

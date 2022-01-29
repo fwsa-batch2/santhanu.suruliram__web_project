@@ -1,5 +1,6 @@
-let feedbackList = [];
-let feedbackObj;
+var feedbackList = [];
+
+//let feedbackObj;
 function loadFromLs() {
     const getFromLS_feedbackList = JSON.parse(localStorage.getItem('feedbackList'));
     if (getFromLS_feedbackList != null){
@@ -8,48 +9,38 @@ function loadFromLs() {
     }
 }
 loadFromLs();
-function submitFeedback() {
+
+function submitFeedback(event) {
+    event.preventDefault();
+    //Step 1: 
     const feedback = document.getElementById('feedback-input').value;
-    const rating = document.getElementById('rating').value;
-    const getFromLsCurrentEmail = localStorage.getItem('current_loggedin_user');
-    const getFromLS = JSON.parse(localStorage.getItem('usersname'));
-    let i, username;
+    //Step 2: Validation
+    let getFromLsCurrentEmail = JSON.parse(localStorage.getItem('current_loggedin_user'));
+    const current = new Date();
+    const month = current.getMonth() +1;
+    const dateTime = current.getDate()+'/'+month+'/'+current.getFullYear()+' '+current.getHours()+':'+current.getMinutes(); 
     if (getFromLsCurrentEmail == null){
-        alert('Kindly Login before sending us your Feedback!');
+        getFromLsCurrentEmail = 'Anonymous';
+    } else {
+        getFromLsCurrentEmail = getFromLsCurrentEmail[1]
     }
-    else if(getFromLsCurrentEmail == "Admin"){
-        console.log(getFromLsCurrentEmail)
-        username = getFromLsCurrentEmail;
-        feedbackObj = {
-            'username' : username,
-            'rating' : rating,
-            'feedback': feedback,
-        };
-        feedbackList.unshift(feedbackObj);
-        localStorage.setItem('feedbackList', JSON.stringify(feedbackList));
-        window.location.reload();
-    } 
-    else {
-        for (i=0; i < getFromLS.length; i++){
-            const user = getFromLS[i];
-            const email = user.email;
-            if (getFromLsCurrentEmail == email){
-                username = user.username;
-                break;
-            }
-        }
-        feedbackObj = {
-            'username' : username,
-            'rating' : rating,
-            'feedback': feedback,
-        }
-        feedbackList.unshift(feedbackObj);
-        localStorage.setItem('feedbackList', JSON.stringify(feedbackList));
-        window.location.reload();
+    renderFunction(getFromLsCurrentEmail, feedback, dateTime);
+}
+function renderFunction(getFromLsCurrentEmail, feedback, dateTime) {
+    const feedbackObj = {
+        'username' : getFromLsCurrentEmail,
+        'feedback': feedback,
+        'dateTime': dateTime,
     }
-    
+    feedbackList.push(feedbackObj);
+    localStorage.setItem('feedbackList', JSON.stringify(feedbackList));
+    window.location.reload();
 }
 function displayFeedback(item) {
-    document.getElementById('feedback-area').innerHTML += `<div id="fb-div"><div id="name">${item.username}</div> <br>
-    <div><span id="star">${item.rating}</span> ${item.feedback}</div> </div>`
+    document.getElementById('feedback-area').innerHTML += 
+    `<div id="fb-div">
+        <div id="name">${item.username}</div>
+         <br> <div id="time-div">${item.dateTime}</div>
+    <div> ${item.feedback}</div> </div>`
 }
+

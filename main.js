@@ -1,10 +1,15 @@
-var loggedInUser = localStorage.getItem('current_loggedin_user');
+var loggedInUser = JSON.parse(localStorage.getItem('current_loggedin_user'));
+
 if(loggedInUser != null){
-    document.getElementById('btn-area').innerHTML = '<button class="btns" style="background-color:green;" onclick="logOut()">Log Out</button>';
-    if (loggedInUser == "Admin") {
+
+    if (loggedInUser[1] == "Admin") {
         document.getElementById('btn-area').innerHTML = `<button class="btns" style="background-color:green;" onclick="logOut()">Log Out</button>
-        <a href="./pages/add-packages.html"><button class="btns">Add</button></a>`;
+        <a href="./pages/add-packages.html"><button class="btns">Add</button></a><span id="username-box"><img src="./assets/img/avatar.png" style="height:17px;">Admin</span>`;
+    } else{
+        document.getElementById('btn-area').innerHTML = '<button class="btns" style="background-color:green;" onclick="logOut()">Log Out</button>'+ 
+        `<span id="username-box"><img src="./assets/img/avatar.png" style="height:17px;"> ${loggedInUser[1]}</span>`;
     }
+
 }
 function loginRecommendation() {
     if(loggedInUser === null){
@@ -38,25 +43,7 @@ function addPackages(item) {
     <button type="button" class="btns-booking" onclick="bookPlace('${item.place_name}')">Book now</button>
     </div>`
 }
-function search() {
-    
-    let searchInput = document.getElementById('search').value.toLowerCase;
-    switch(searchInput){
-        case "hawaii" : 
-            console.log('working');
-            window.location.href = "./pages/hawaii.html";
-            break
-        case "maldives" : 
-            window.location.href = "./pages/Maldives.html";
-            break
-        case "egypt" :
-            window.location.href = "./pages/Egypt.html";
-            break
-        case "kerala" :
-            window.location.href = "./pages/Kerala.html";
-            break
-        case "china" :
-            window.location.href = "./pages/Chinese_temple.html";
-            break
-    }
-}
+
+
+
+

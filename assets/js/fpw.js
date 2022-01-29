@@ -2,8 +2,8 @@ function randomCode() {
     let rand =  Math.random();
     return (Math.floor((rand * 999999) + 100000)) ;
 }
-let code = randomCode();
-console.log(code);
+const code = randomCode();
+
 function sendEmail() {
     let email = document.getElementById('email').value;
     Email.send({

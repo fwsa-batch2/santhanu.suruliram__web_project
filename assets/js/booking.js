@@ -64,12 +64,28 @@ function bookTrip(){
  
 function paySelection() {
   const payMethod = document.getElementById('pay-select').value;
+  console.log()
   if (payMethod == 'card'){
-    document.getElementById('payment-div').innerHTML = `<img src='../assets/img/payment-card.png'>`
+    document.getElementById('payment-div').innerHTML = `<img src="../assets/img/visa.svg" style="height:50px;">
+    <img src="../assets/img/mastercard.svg" style="height:50px;"> <br>
+    <img src='../assets/img/payment-card.png' class='payimg'> 
+    <input type="number" placeholder="Card Number" minlength="16" maxlength="16" required>
+    <input type='number' placeholder="MM" style="width:100px;" minlength="2" maxlength="2" required> / 
+    <input type="number" placeholder="YY"  style="width:100px;" minlength="2" maxlength="2" required> <br>
+    <input type="number" placeholder="CVV Number" minlength="3" maxlength="3" required> <br>
+    <input type="text" placeholder="Card Holder Name" required> <br>
+    `
   } else if(payMethod == 'upi'){
-    document.getElementById('payment-div').innerHTML = `<img src='../img/payment-upi.png'>`
+    document.getElementById('payment-div').innerHTML = `<img src='../assets/img/payment-upi.png' class='payimg'>
+    <input type="email" placeholder="UPI ID" required>
+    <input type="text" placeholder="Billing Address" required>
+    `
   } else {
-    document.getElementById('payment-div').innerHTML = `<img src='../img/payment-net-banking.png'>`
+    document.getElementById('payment-div').innerHTML = `<img src='../assets/img/payment-net-banking.png' class='payimg'>
+    <input type="text" placeholder="Bank Name" required> <br>
+    <input type="text" placeholder="Account Holder Name" required> <br>
+    <input type="number" minlength="4" maxlength="4" placeholder="Net Banking Pin" required> <br>
+    `
   }
 }
-  
+paySelection();

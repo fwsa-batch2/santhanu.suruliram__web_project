@@ -4,13 +4,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     padding: 10px;
-    grid-gap: 5px;
+    grid-gap: 10px;
 }
 
 .trip-div > div {
-    background-color: rgb(148, 148, 148);
+    background-color: rgb(221, 221, 221);
     padding: 10px;
     border-radius: 5px;
+    box-shadow: 5px 5px 10px 0.1px rgb(177, 177, 177);
 }
 .trip-div > div > p {
     color: rgb(0, 0, 165);

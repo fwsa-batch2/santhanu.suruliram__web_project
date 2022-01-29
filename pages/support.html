@@ -10,8 +10,8 @@
     <style>
       
       #inp {
-        background-color: black;
-        color: white;
+        background-color: rgb(204, 204, 204);
+        color: rgb(0, 0, 0);
         width: 600px;
         height: 40px;
         border-radius: 5px;
@@ -35,17 +35,25 @@
         padding: 10px;
         margin-left: 20%;
       }
-      #star {
-        color: yellow;
+      #feedback-input{
+        background-color: rgb(179, 179, 179);
+        border: none;
+        border-radius: 5px;
+        color: black;
+        font-size: large;
+        outline: none;
       }
       #fb-div{
         text-align: left;
-        background-color: grey;
+        background-color: rgb(211, 211, 211);
         margin: 4px;
         padding: 5px;
         color: white;
         border-radius: 5px;
-        box-shadow: 3px -3px 9px rgb(128, 128, 128);
+        box-shadow: 3px -3px 9px rgb(216, 216, 216);
+      }
+      #time-div{
+        float: right;
       }
     </style>
   </head>
@@ -55,7 +63,6 @@
       <div><ul id="navbar" >
         <li><a href="../index.html">Home</a></li>
         <li ><a href="./explore.html">Explore</a></li>
-        <li ><a href="./articles.html">Articles</a></li>
         <li ><a href="./mytrips.html">My trips</a></li>
         <li class="active"><a href="./support.html">Support</a></li>
         <li><a href="./contact.html">Contact</a></li>
@@ -75,16 +82,9 @@
       <div id="feedback-area"> Feedbacks:</div> <hr>
       <h3>Send us Your Feedback:</h3>
       <div id="feedback-write-area">
-        <form onsubmit="submitFeedback()">
-        <textarea id="feedback-input" cols="89" rows="10" style="background-color: black; color: white; border-radius: 5px; font-size: large;"> </textarea> 
-        <br> Your Rating:
-        <select name="rating" id="rating" style="height: 40px; background-color: grey; color: yellow;">
-          <option value="★★★★★">★★★★★</option>
-          <option value="★★★★☆">★★★★☆</option>
-          <option value="★★★☆☆">★★★☆☆</option>
-          <option value="★★☆☆☆">★★☆☆☆</option>
-          <option value="★☆☆☆☆">★☆☆☆☆</option>
-        </select>
+        <form onsubmit="submitFeedback(event)">
+        <textarea id="feedback-input" cols="89" rows="4"> </textarea> 
+        <br> 
         <button type="submit" class="btn">Submit</button>
         </form>
       </div>

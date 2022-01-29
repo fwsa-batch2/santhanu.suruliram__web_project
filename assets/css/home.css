@@ -80,6 +80,15 @@ body {
   height: 100px;
   
 }
+#username-box{
+  font-size: x-large;
+  background-color: white;
+  padding: 2px;
+  border-radius: 50px;
+  height: fit-content;
+  width: fit-content;
+  margin: 10px;
+}
 #tour-content-heading{
   background-color: white;
   border-radius: 5px;
@@ -130,16 +139,13 @@ body {
 img {
   border-radius: 5%;
   height: 250px;
-  transition: 0.4s;
+ 
 }
 #searchbar {
   justify-content: center;
   grid-template-columns: 1fr 1fr;
 }
 
-img:hover {
-  height: 260px;
-}
 #icon {
   height: 30px;
 }
@@ -148,7 +154,7 @@ input {
   background-color: white;
   border: none;
   color: black;
-  height: 20px;
+  height: 5px;
   font-size: medium;
   border-radius: 20px;
   margin-bottom: 20px;

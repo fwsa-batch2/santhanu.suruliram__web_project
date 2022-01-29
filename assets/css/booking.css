@@ -1,11 +1,15 @@
 input{
     height: 40px;
     width: 500px;
+    outline: none;
+    border-radius: 5px;
 }
 #ccode_box{
     height: 40px;
     width: 60px;
+    border: none;
     border-radius: 50px;
+    outline: none;
 }
 #phno_box{
     width: 433px;
@@ -13,7 +17,6 @@ input{
 #file{
     width: 100px;
     height: 20px;
-    position: element(avatar);
 }
 #main-div{
     display: grid;
@@ -21,9 +24,10 @@ input{
     grid-gap: 15px;
 }
 .box{
-    background-color: rgb(109, 109, 109);
+    background-color: rgb(219, 219, 219);
     padding: 15px;
     border-radius: 5px;
+    height: fit-content;
 }
 #left-panel{
     display: grid;
@@ -40,14 +44,18 @@ input{
     height: 50px;
     width: 200px;
     border-radius: 5px;
+    border: none;
 }
 #pay-select > option {
     height: 50px;
     width: 200px;
     font-size: large;
+    border: none;
 }
-#payment-div > img {
-    height: 200px;
+
+.payimg{
+    height: 100px;
+    float:  right;
 }
 .form-btns {
     height: 50px;
