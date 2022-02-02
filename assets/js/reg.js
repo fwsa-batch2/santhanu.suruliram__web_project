@@ -6,7 +6,7 @@ function getFromLs(){
     }
     return userList;
 }
-console.log(getFromLs())
+
 function setToLs(key ,userDetails) {
     let userList = getFromLs();
     userList.push(userDetails);

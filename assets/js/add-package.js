@@ -1,13 +1,14 @@
-var imgInp = document.getElementById('file');
+
+let imgInp = document.getElementById('file');
 imgInp.onchange = function(){
 let files = imgInp.files;
 if (file) {
     document.getElementById('img').src = URL.createObjectURL(files[0]);
     }};
-var imgFile = document.getElementById("img");
-var imgAsDataURL;
+let imgFile = document.getElementById("img");
+let imgAsDataURL;
 imgFile.addEventListener("load", function () {
-    var imgCanvas = document.createElement("canvas"),
+    let imgCanvas = document.createElement("canvas"),
     imgContext = imgCanvas.getContext("2d");
     imgCanvas.width = imgFile.width;
     imgCanvas.height = imgFile.height;
@@ -18,18 +19,20 @@ imgFile.addEventListener("load", function () {
     }
     catch (e) {
         console.log("Storage failed: " + e);
-    }
-    return imgAsDataURL;
+    } return imgAsDataURL;
     }, false); 
-let packList = [];
-function onPageLoad() {
-    const getFromLs = JSON.parse(localStorage.getItem('addedPackages'));
-    if (getFromLs != null){
-        packList = getFromLs;
-        return packList;
+
+function getFromLs(key) {
+    const fromLs = JSON.parse(localStorage.getItem(key));
+    let returnData = [];
+    if (fromLs != null){
+        returnData = fromLs;
     }
+    return returnData;
 }
-onPageLoad();
+function setToLs(key, data) {
+    localStorage.setItem(key, data);
+}
 function addPackage() {
     const placeName = document.getElementById('place-name').value;
     const content = document.getElementById('content').value;
@@ -38,8 +41,8 @@ function addPackage() {
         'cover_image' : imgAsDataURL,
         'content' : content
     }
+    let packList = getFromLs('addedPackage');
     packList.push(packObj);
-    localStorage.setItem('addedPackages', JSON.stringify(packList));
+    setToLs('addedPackage', JSON.stringify(packList));
     alert('Package added Successfully!!');
-    window.location.reload();
 }
